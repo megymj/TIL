@@ -8,6 +8,10 @@ GitHub에서 자주 사용되는 Pull Request(PR)과 Issue에 대해 알아본�
 
 ## Pull Request 시도하기
 1. 대상 프로젝트를 local로 clone한다.
-2.
-
+2. `git checkout -b [branch이름]` 명령어를 통해, branch 생성과 동시에 생성한 branch로 이동한다.
+3. 변경사항을 commit한다.
+4. `git push`명령어로 변경사항을 push한다   
+```
+git push origin [branch이름]
+```
 
