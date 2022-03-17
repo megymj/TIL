@@ -1,6 +1,6 @@
 > 참고: [Android developers](https://developer.android.com/guide/platform)
 
-## 안드로이드 구조
+# 안드로이드 구조
 ![android](https://user-images.githubusercontent.com/80478750/157567016-ec389fec-efae-4ad8-8a5b-a79d3ebd7787.PNG)
 
 * Linux Kernel: 구글이 작업(만듬)
