@@ -1,4 +1,4 @@
-## cannot find symbol class Button 오류
+# cannot find symbol class Button 오류
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -30,4 +30,4 @@ public class MainActivity extends AppCompatActivity {
 **자동으로 import 하도록 setting**
 * `File > Settings > Editor > General > Auto import`에서,  
 ![java](https://user-images.githubusercontent.com/80478750/157669526-82861eb9-35d2-4809-81b8-93bbf884e0a7.PNG)  
- dd ... 부분과 Optimize ... 부분을 체크한 뒤, Apply하면 된다.
+ Add ... 부분과 Optimize ... 부분을 체크한 뒤, Apply하면 된다.
