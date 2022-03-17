@@ -1,17 +1,19 @@
-## 논문 작성시 몇 가지 tip 기록
+# 논문 작성시 몇 가지 Tip 기록
 
-### 1. Overleaf 편집기 사용
-   * overleaf 편집기는 Latex 문법을 사용하는데, Latex 문법은 사람이 문서 편집에 신경 쓸 필요 없이 내용에만 집중할 수 있도록 해준다.
-   * overleaf 사이트에서, tutorial을 통해 Latex 문법을 학습할 수 있다.
-   * IEEE Collabratec 가입 후 overleaf와 계정을 연동하면, overleaf의 유료 기능을 사용할 수 있다. [참고](https://made-by-tia.tistory.com/)
+## 1. Overleaf 편집기 사용
+   * Overleaf 편집기는 Latex 문법을 사용하는데, Latex 문법은 사람이 문서 편집에 신경 쓸 필요 없이 내용에만 집중할 수 있도록 해준다.
+   * Overleaf 사이트에서, tutorial을 통해 Latex 문법을 학습할 수 있다.
+   * IEEE Collabratec 가입 후 Overleaf와 계정을 연동하면, Overleaf의 유료 기능을 사용할 수 있다. [참고](https://made-by-tia.tistory.com/)
 
-### 2. 영어 문장 교정 tool
+## 2. 영어 문장 교정 tool
    * grammerly: 유료. 한 달, 분기, 년 단위로 결제할 수 있는데, **일시불로 결제된다**
       * 한 번씩 이메일로 프로모션 관련 내용을 보내니, 이때 결제하면 저렴하게 결제할 수 있다. 
       * chrome 확장 프로그램으로 등록해 놓으면 더욱 편리하게 사용할 수 있다.
    * wordvice ai: 무료. 내 기준 grammerly보다는 세부적으로 문서를 교정하지 못 하는 것 같다.
 
-### 3. 논문 참고문헌 맞추는 법
+## 3. 논문 참고문헌 맞추는 법
    * 제출하는 기관별로 참고문헌 작성 양식이 있다면 그에 맞추면 되지만, 만약 따로 양식이 없는 경우 맞추는 방법이다.
    * `google scholar 접속 > 논문제목 검색 > 해당 논문 하단에 '인용' 선택 > 3가지 양식 중 하나를 복사해서 사용한다`
    
+## 기타 Tip
+   * 부득이한 경우를 제외하면 그림/표는 페이지 상단에 위치하는 것이 좋다
