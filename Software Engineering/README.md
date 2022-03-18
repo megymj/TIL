@@ -1,6 +1,6 @@
 # Software Engineering(소프트웨어 공학)
 * 본 리포지토리는 2022 1학기 서울과학기술대학교 소프트웨어공학 수업 내용을 기록한 것입니다.
-* 강의자: 서울과학기술대학교 김진대 교수님 
+* 강의자: 김진대 교수님 
 * 주교재: Ian Sommerville, Software Engineering, 10th Edition, Pearson (google에 검색하면 pdf 파일이 공개되어 있다)   
    
 ## 수업 목표
