@@ -25,7 +25,7 @@ Evolution: 과거-유지보수, 현재-소프트웨어 자체가 회사의 중�
 - Process descriptions: Activities + Ordering.
 - Process descriptions may also include:
     - Products, which are the outcomes of a process activity;
-    - Roles, which reflect the responsibilities of the people involvedin the process;
+    - Roles, which reflect the responsibilities of the people involved in the process;
     - Pre-and post-conditions, which are statements that are true before and after a process activity has been enacted or a
        product produced.
 
@@ -119,7 +119,7 @@ More rapid delivery and deployment to the customer.
   - Managers need regular deliverables to measure progress.
   - If systems are developed quickly, it is not cost-effective to
     produce documents that reflect every version of the system.
-- System structure tends to degrade as new increments are added_._
+- System structure tends to degrade as new increments are added
   - Unless time and money is spent on `refactoring` to improve the
     software, regular change tends to corrupt its structure.
   - Incorporating further software changes becomes increasingly
@@ -181,7 +181,9 @@ System structure tends to degrade as new increments are added
 
 ```
 Reduced costs and risks
-- 가져다 쓰므로 빠르게 개발할 수 있고, reusable한 sw는 이미 검증이 된 sw이다. 다른 사람이 개발 과정에서 test 및 validation 했을 것이고 심지어 이 sw를 가져다 쓴 사람도 validation을 했을 것이다. 그래서 문제가 발견된 것이 있으면 어느정도는 고쳐졌을 확률이 높다.
+- 가져다 쓰므로 빠르게 개발할 수 있고, reusable한 sw는 이미 검증이 된 sw이다. 
+다른 사람이 개발 과정에서 test 및 validation 했을 것이고 심지어 이 sw를 가져다 쓴 사람도 validation을 했을 것이다. 
+그래서 문제가 발견된 것이 있으면 어느정도는 고쳐졌을 확률이 높다.
 
 Loss of control
 - 내가 만든게 아니므로 내가 마음대로 고치기가 좀 그렇다. 만약 가져다 쓴 sw의 version이 바뀌었는데, 우리의 system과 호환이 안 될수도 있다. 
@@ -224,7 +226,8 @@ Loss of control
   and may be inter-leaved.
 
 ```
-요구사항을 실제로 충족시킬 수 있는 시스템을 만드는 것. design과 implementation을 요새는 따로 분리하지 않음. 자기가 알아서 디자인과 구현을 진행해야 한다
+요구사항을 실제로 충족시킬 수 있는 시스템을 만드는 것. 
+design과 implementation을 요새는 따로 분리하지 않음. 자기가 알아서 디자인과 구현을 진행해야 한다
 ```
 
 **A general model of the design process**
@@ -233,14 +236,14 @@ Loss of control
 
 
 ## Design activities
-_-_ **_Architectural design_** _,_ where you identify the overall structure of
+- **_Architectural design_** , where you identify the overall structure of
     the system, the principal components (subsystems or modules),
     their relationships and how they are distributed.
-_-_ **_Database design_** _,_ where you design the system data structures
+- **_Database design_** , where you design the system data structures
     and how these are to be represented in a database.
-_-_ **_Interface design_** _,_ where you define the interfaces between
+- **_Interface design_** , where you define the interfaces between
     system components.
-_-_ **_Component selection and design_** _,_ where you search for
+- **_Component selection and design_** , where you search for
     `reusable` components. If unavailable, you design how it will
     operate.
 
@@ -332,14 +335,16 @@ Customer testing
        features of the system to customers.
 - **_Change tolerance_** , where the process is designed so that changes can
   be accommodated at relatively low cost.
-     - This normally involves some form of incremental development.^
+     - This normally involves some form of incremental development.
        - Proposed changes may be implemented in increments that have
          not yet been developed.
      - If this is impossible, then only a single increment (a small part of the
        system) may have be altered to incorporate the change.
 
 ```
-우리는 모든 변경사항을 예측할 수 없다.Change Tolerance- 처음에 설계 및 구현을 할 때, 이런 변경 사항이 발생하더라도 잘 적용될 수 있도록 시스템을 설계하는 것(모듈화와 관련이 있다)
+우리는 모든 변경사항을 예측할 수 없다.
+Change Tolerance
+- 처음에 설계 및 구현을 할 때, 이런 변경 사항이 발생하더라도 잘 적용될 수 있도록 시스템을 설계하는 것(모듈화와 관련이 있다)
 ```
 
 ## Coping with changing requirements
@@ -353,7 +358,12 @@ Customer testing
   - This supports both change avoidance and change tolerance.
 
 ```
-아예 requirements가 바뀌는 경우(요구사항이 변경되는 경우)두 방법의 핵심 idea: 고객에게 미리 일부를 보여준다. 다 하기 전에 미리 보여주고, 요구사항에 맞추어서 진행하는 것. (e.g. 100을 해야하면 20을 먼저 보여주고, 요구사항이 변경되면 지금 미리 얘기하도록 하는 방식)System prototyping- prototyping을 해주는 도구를 많이 사용한다. Demo를 보여주기보다는, ppt 등으로 슬라이드를 만들어서 이미지를 대략 보여준다Incremental delivery- 각각의 version들을 계속해서 고객에게 전달할 수 있는 형태로 보여준다
+아예 requirements가 바뀌는 경우(요구사항이 변경되는 경우)두 방법의 핵심 idea: 고객에게 미리 일부를 보여준다. 다 하기 전에 미리 보여주고, 요구사항에 맞추어서 진행하는 것. 
+(e.g. 100을 해야하면 20을 먼저 보여주고, 요구사항이 변경되면 지금 미리 얘기하도록 하는 방식)
+System prototyping
+- prototyping을 해주는 도구를 많이 사용한다. Demo를 보여주기보다는, ppt 등으로 슬라이드를 만들어서 이미지를 대략 보여준다
+Incremental delivery
+- 각각의 version들을 계속해서 고객에게 전달할 수 있는 형태로 보여준다
 ```
 
 ## Software prototyping
@@ -388,7 +398,7 @@ Customer testing
   not a good basis for a production system:
   - It may be impossible to tune the system to meet non-
     functional requirements;
-  - Prototypes are normally undocumented;^
+  - Prototypes are normally undocumented;
   - The prototype structure is usually degraded through rapid
     change;
   - The prototype probably will not meet normal organisational
