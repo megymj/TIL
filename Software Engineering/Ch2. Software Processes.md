@@ -97,6 +97,7 @@ model의 장, 단점을 잘 이해해야, 어떤 model을 사용해야 할지 �
 Incremental delivery와 혼동하지 않도록 주의한다.
 ![image](https://user-images.githubusercontent.com/80478750/159023561-fb57e84b-62a1-4b59-9486-3c837e40b433.png)
 
+## Incremental development benefits
 - Reduced cost for accommodating customer requirements changes.
     - The amount of analysis and documentation that has to be redone
        is much less than is required with the waterfall model.
