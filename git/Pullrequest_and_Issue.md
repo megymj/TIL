@@ -23,6 +23,8 @@ git push origin [branch이름]
 
 변경사항을 담당자가 확인한 뒤, main branch에 merge하게 되면 알림 메일을 받는다
 
+`보통 branch는 작업 단위로 생성하므로, 하나의 issue를 처리하면서 사용된 local의 branch는 main branch에 merge된 이후 제거하는 것이 좋다`
+
 ## Pull Request 검토 후 처리하기
 1. GitHub Repository page 내에 `Pull requests` 탭 클릭
 2. 대상 Pull request 클릭하여 내용 검토
