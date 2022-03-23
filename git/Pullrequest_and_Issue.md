@@ -19,6 +19,9 @@ git push origin [branch이름]
 ```
 5. 이후 본인의 깃헙 저장소로 이동하면 `Compare & pull request` 버튼이 보일 것이다. 버튼을 클릭한다. 
    * 또는 `~ branches`에서 `New pull request` 클릭 
+![PR capture](https://user-images.githubusercontent.com/80478750/159705353-0e8f04b6-bb8c-462d-86f6-a1021d26092f.PNG)
+
+
 6. 메시지 작성 후 `Create pull request` 클릭
 
 변경사항을 담당자가 확인한 뒤, main branch에 merge하게 되면 알림 메일을 받는다
