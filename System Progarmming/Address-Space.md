@@ -5,7 +5,7 @@
 * Address Space: 메모리 상에 있는 주소가 가지는 범위
 
 Question) in c/c++, 'p'의 크기는 어떻게 되는가?(sizeof 연산자를 사용해서 p의 크기를 출력하면 결과가 무엇이 되는가?)
-```c/c++
+```c
 char ch;
 char *p = &ch;
 ```
