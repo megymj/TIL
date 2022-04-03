@@ -1,6 +1,6 @@
 # AWS 시작 시 설정하면 좋은 것들
 ## 1. 계정 Multi-factor Authentication(MFA) 설정
-* AWS에는 Root 계정과 IAM 게정이 있는데, Root계정에서 MFA 설정은 필수적이다. 
+* AWS에는 Root user와 IAM user가 있는데, Root user에서 MFA 설정은 필수적이다. 
 * 검색 결과 실제로 MFA 설정을 하지 않아서, 해킹으로 인해 AWS 요금이 내가 사용한 것 이상으로 나온 경우가 종종 있다고 한다.
 1. AWS 로그인 이후, 내 게정을 클릭하여 `내 보안 자격 증명`을 클릭한다.
 2. `멀티 팩터 인증 -> MFA  활성화` 
