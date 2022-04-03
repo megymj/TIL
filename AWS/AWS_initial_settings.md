@@ -1,6 +1,14 @@
 # AWS 시작 시 설정하면 좋은 것들
+## 1. 계정 Multi-factor Authentication(MFA) 설정
+* AWS에는 Root 계정과 IAM 게정이 있는데, Root계정에서 MFA 설정은 필수적이다. 
+* 검색 결과 실제로 MFA 설정을 하지 않아서, 해킹으로 인해 AWS 요금이 내가 사용한 것 이상으로 나온 경우가 종종 있다고 한다.
+1. AWS 로그인 이후, 내 게정을 클릭하여 `내 보안 자격 증명`을 클릭한다.
+2. `멀티 팩터 인증 -> MFA  활성화` 
+3. 이후 핸드폰에 google OTP 어플을 설치한 뒤, 인증 절차를 거치면 된다.
 
-## 1. Free Tier(프리 티어) 사용량 알림 받기
+<br>
+
+## 2. Free Tier(프리 티어) 사용량 알림 받기
 * [AWS 참고 링크](https://aws.amazon.com/ko/about-aws/whats-new/2017/12/aws-free-tier-usage-alerts-automatically-notify-you-when-you-are-forecasted-to-exceed-your-aws-service-usage-limits/)
 * AWS Free Tier는 무료이지만, 일정 용량 이상을 사용하면 과금이 되는 것으로 보인다. 
 * 따라서, Free Tier 사용량 알림을 신청해 놓는 것이 좋다.
