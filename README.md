@@ -9,6 +9,10 @@
 * 강의 내용 정리는 되도록 따로 repository를 파서 그곳에 정리하기
 * 분류는 매주 주말에 시행하기
 
+## AWS
+* [AWS 가입 후 초기 세팅](https://github.com/Moojun/TIL/blob/main/AWS/AWS_initial_settings.md)
+* [AWS 공식 문서에서 자주 등장하는 용어 정리](https://github.com/Moojun/TIL/blob/main/AWS/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.md)
+
 ## Android
 * 학습
   * [안드로이드 구조](https://github.com/Moojun/TIL/blob/main/Android/Architecture.md)
@@ -21,8 +25,11 @@
 * [null](https://github.com/Moojun/TIL/blob/main/Java/null.md)
 * [Varaible Type](https://github.com/Moojun/TIL/blob/main/Java/Variable_Type.md)
 
-## Git
-* [GitHub repository name 변경](https://github.com/Moojun/TIL/blob/main/git/RepositoryName.md)
-* [Commit message convention](https://github.com/Moojun/TIL/blob/main/git/commit-convention.md)
+## MySQL
+* [csv file import](https://github.com/Moojun/TIL/blob/main/MySQL/load_files.md)
 
-  
+## System Programming
+* [Address space(주소 공간)](https://github.com/Moojun/TIL/blob/main/System%20Progarmming/Address-Space.md)
+
+## Git
+* 추후 private repository로 내용 이동 예정
