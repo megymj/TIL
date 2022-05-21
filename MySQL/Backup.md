@@ -52,3 +52,10 @@ mysqldump -u user -p test1_db < backup_test1_table.sql
 password: 1234
 ```
 
+<br>
+
+## 두 번째 방법] MySQL Workbench에서, Table Data Export Wizard, Table Data Import Wizard
+* Table Data Export Wizard 사용 시, 약 9,600개의 row가 포함된 data에 있어서는 10초 안에 Export가 되는 것을 확인함.
+
+
+
