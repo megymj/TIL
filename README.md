@@ -3,6 +3,10 @@
 * 단기 목표는 2022년까지 꾸준히 기록하기
 * 참고한 GitHub: [namjunemy](https://github.com/namjunemy/TIL)님의 TIL
 
+## 중요] Velog와 GitHub TIL을 같이 병행하기로 하였다.
+* [Velog 주소@moojun33](https://velog.io/@moojun33)
+* Velog가 글 작성이 GitHub에 비해 훨씬 편리하고, html, css tag도 지원해서, 당분간 Velog에 글을 작성할 예정
+
 ## 작성 규칙
 * 폴더와 파일명은 최대한 영어로 작성하려고 노력한다
 * 출처를 명확히 표기하고, 원작자가 참고를 허용하는 자료만 사용한다
