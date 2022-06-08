@@ -1,0 +1,36 @@
+# MySQL Database 및 Table 조회
+### SHOW DATABASES;
+* 생성되어있는 database를 조회한다
+
+
+### SELECT DATABASE();
+* 현재 사용중인 database를 보여준다
+
+
+### USE [DATABASE명];
+* 현재 사용중인 DATABASE를 변경한다
+
+
+### SHOW TABLES;
+* DB 내의 table들을 보여준다
+
+
+### DESC [TABLE명];
+* 특정 테이블의 scheme를 확인한다
+
+
+### SHOW CREATE TABLE [TABLE명];
+* CREATE TABLE문을 보여준다(**동일한 TABLE을 생성할 때 유용하게 사용할 수 있을 것 같다**)
+
+
+
+
+
+
+
+
+
+
+
+
+
