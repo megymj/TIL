@@ -1,6 +1,8 @@
+> reference link: [w3schools-MySQL](https://www.w3schools.com/mySQl/mysql_sql.asp)
+
 # SQL 유용한 문법 정리
 
-## CREATE TABLE
+## 1. CREATE TABLE
 
 * Table1과 같은 구조의 table 만들기(data는 생성되지 않는다 )
 
@@ -18,7 +20,7 @@
 
 
 
-## TRUNCATE verses DELETE FROM
+## 2. TRUNCATE verses DELETE FROM
 
 * TRUNCATE
 
@@ -29,3 +31,12 @@
   * WHERE절을 이용하여 원하는 데이터만을 삭제하는 방식
   
   * Auto Increment가 데이터가 지워진 내역 바로 다음부터 시작됨(ex. id가 1~5까지인 data가 지워졌으면, DELETE FROM 이후 id에 6부터 들어감)
+
+
+## 3. ORDER BY RAND() LIMIT 
+
+
+
+## 4. Transaction 
+
+
