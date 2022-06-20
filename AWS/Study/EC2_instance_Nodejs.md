@@ -47,5 +47,8 @@ index.js 파일이 있는 위치로 이동 후, `node index.js` 입력. "ctrl + 
 <br>
 
 ## 4. AWS Security Group
-EC2 Instance의 inbound rules에서, 3000번 port를 열어 줘야 한다. 
+EC2 Instance의 inbound rules에서, 3000번 port를 열어 줘야 한다.   
+이후 EC2 instance의 `Public IPv4 DNS`를 복사한 뒤, `:3000` 포트 번호를 뒤에 붙여주면 정상적으로 실행이 되는 것을 확인할 수 있다.
+![chrome](https://user-images.githubusercontent.com/80478750/174538023-fd3ade98-82e9-4ec8-82e8-e6a37536d4de.PNG)
+
 
