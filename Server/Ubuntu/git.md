@@ -1,11 +1,11 @@
-# Linux-Ubuntu에서 git 사용해보기
+# Ubuntu에서 git 사용해보기
 
 ## 1. Ubuntu에 git 환경 구축하기
 1. 패키지 리스트 업데이트
 ```
 sudo apt-get install git
 ```
- 
+
 2. git 설치
 ```
 sudo apt install git
@@ -45,7 +45,6 @@ git push -u origin main
 결과: fatal: unable to access 'https://github.com/[레포지토리명].git': The requested URL returned error: 403
 ```
 이후 검색을 해서 github token 사용, git set-url 등의 방법을 사용하였으나 실패하여, 해당 저장소를 fork하여 사용하기로 함.
-
 
 
 
