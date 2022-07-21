@@ -2,6 +2,8 @@
 
 # SQL 유용한 문법 정리
 
+
+
 ## 1. CREATE TABLE
 
 * Table1과 같은 구조의 table 만들기(data는 생성되지 않는다 )
@@ -40,3 +42,15 @@
 ## 4. Transaction 
 
 
+
+
+
+## etc
+
+```sql
+# clear MySQL console screen
+mysql > system clear
+mysql > \! clear
+```
+
+  
