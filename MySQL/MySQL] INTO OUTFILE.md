@@ -39,3 +39,17 @@ LINES TERMINATED BY '\n';
    * 파일에 Permission denied error 발생 -> root 계정으로 chown command를 통해 소유자 변경
    
    * 이후 위의 scp command를 입력하니, 정상적으로 저장이 됨 (로컬 저장소 위치: ~/Desktop/[Directory name] : Mac 기준) 
+
+
+
+<br>
+
+
+
+### +a: SELECT ... INTO Statement
+
+> reference link: [MySQL documents](https://dev.mysql.com/doc/refman/8.0/en/select-into.html)
+
+- `SELECT ... INTO  var_list` selects column values and stores them into variables.
+- `SELECT ... INTO OUTFILE` writes the selected rows to a file. Column and line terminators can be specified to produce a specific output format.
+- `SELECT ... INTO DUMPFILE` writes a single row to a file without any formatting.
