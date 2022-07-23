@@ -45,6 +45,34 @@
 
 
 
+## 5. Database 및 Table 조회
+
+```sql
+# 생성되어있는 database를 조회한다
+SHOW DATABASES;
+
+# 현재 사용중인 database를 보여준다
+SELECT DATABASE();
+
+# 현재 사용중인 database를 변경한다
+USE [DATABASE NAME];
+
+# db 내의 table 목록을 보여준다
+SHOW TABLES;
+
+# 특정 table의 schema를 확인한다
+DESC [TABLE NAME];
+
+# CREATE TABLE 문을 보여준다. 
+SHOW CREATE TABLE [TABLE NAME];
+```
+
+
+
+
+
+
+
 ## etc
 
 ```sql
