@@ -12,6 +12,9 @@ INTO OUTFILE '/var/lib/mysql-files/commits.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
+
+# copy & paste 용도
+SELECT * FROM files_copy INTO OUTFILE '/var/lib/mysql-files/files_copy.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
 ```
 
 * 하지만 위에서 `INTO OUTFILES` command 사용 시, 아래와 같은 오류가 발생한다.
