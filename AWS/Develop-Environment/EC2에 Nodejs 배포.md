@@ -1,6 +1,12 @@
-# AWS] EC2에 node.js 배포하기
+# AWS] EC2에 Node.js 배포하기
 * ssh를 통해 cmd창에서 EC2 instance로 접속
 * EC2 instance type: `Ubuntu Server 20.04`
+
+
+
+<br>
+
+
 
 ## 1. PPA를 이용해서 Node.js 설치
 > reference link: [velog](https://velog.io/@ywoosang/Node.js-%EC%84%A4%EC%B9%98)
@@ -50,5 +56,4 @@ index.js 파일이 있는 위치로 이동 후, `node index.js` 입력. "ctrl + 
 EC2 Instance의 inbound rules에서, 3000번 port를 열어 줘야 한다.   
 이후 EC2 instance의 `Public IPv4 DNS`를 복사한 뒤, `:3000` 포트 번호를 뒤에 붙여주면 정상적으로 실행이 되는 것을 확인할 수 있다.
 ![chrome](https://user-images.githubusercontent.com/80478750/174538023-fd3ade98-82e9-4ec8-82e8-e6a37536d4de.PNG)
-
 

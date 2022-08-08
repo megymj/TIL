@@ -1,4 +1,4 @@
-## 2. EC2 instance에 nodeJs 설치 및 GitHub의 nodeJs project clone한 뒤 실행하기
+## EC2 instance에 Nodejs 설치 및 GitHub의 Nodejsproject clone한 뒤 실행하기
 EC2 instance: Ubuntu 20.04
 
 > reference link: [tistory blog](https://soojae.tistory.com/25)
