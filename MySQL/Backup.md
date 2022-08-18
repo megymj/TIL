@@ -82,6 +82,16 @@ mysql -h [RDS Endpoint] -u [user name] -p [database name] -e "source *.sql"
 
 
 
+#### Database backup도 마찬가지 방식으로 수행
+
+* 단, backup할 database를 미리 만들어 놓고, 지정해 줘야함. [database name] 이 빠지면 query문 오류 발생함
+
+```sql
+mysql -h [RDS Endpoint] -u [user name] -p [database name] -e "source database.sql"
+```
+
+
+
 <br>
 
 
