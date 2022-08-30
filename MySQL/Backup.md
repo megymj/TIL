@@ -74,10 +74,23 @@ mysql -u root[혹은 user name] -p [database name] -e "source filename.sql"
 
 와 같이 입력하니, 정상적으로 백업되는 것을 확인하였다.
 
+
+
+mac] localhost에 backup
+
+```sql
+# localhost 뒤에 port number 붙이면 오류 발생함
+mysql -h localhost -u root -p [database name] -e "source [filename].sql"
+```
+
+
+
+
+
 AWS RDS의 경우도 마찬가지로 수행하니 잘 작동됨. 백업된 .sql 파일이 위치한 디렉토리로 이동한 뒤,
 
 ```sql
-mysql -h [RDS Endpoint] -u [user name] -p [database name] -e "source *.sql"
+mysql -h [RDS Endpoint] -u [user name] -p [database name] -e "source [filename].sql"
 ```
 
 
