@@ -45,8 +45,14 @@ ex] cd Desktop/apache-tomcat-9.0.64/bin
 
 #### 1. Create New Project
 
-* Tomcat 경로는 1번에서 설치한 경로를 지정
-![](https://velog.velcdn.com/images/moojun3/post/76d360cb-4f65-4866-9bb5-335f360f3b47/image.png)
+* Tomcat 경로는 1번에서 설치한 경로를 지정 
+* Template: Web application 선택  
+
+
+
+![Screen Shot 2022-09-05 at 4.58.07 PM](/Users/moojun/Desktop/Screen Shot 2022-09-05 at 4.58.07 PM.png)
+
+
 
 #### 2. localhost path 수정
 
