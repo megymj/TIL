@@ -10,3 +10,4 @@
           aws-region: ap-northeast-2
 ```
 
+3. GitHub에 디렉토리 경로 (e.g Data/benchmark/... ) 등과 같은 것은 올리지 않도록 주의. 협업시에 커밋 기록이 남아버리므로 지우는데 상당한 노력이 소모된다.
