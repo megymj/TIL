@@ -96,11 +96,7 @@ pm2 start app.js
 
 ```
 
-
-
 <br>
-
-
 
 ## 3. AWS RDS 생성 및 EC2와 연결
 
@@ -113,12 +109,8 @@ pm2 start app.js
   mysql -u [user name] -p --host [RDS Endpoint]
   ```
 
-  
-
-
 
 <br>
-
 
 
 ## 4. MySQL Data import to RDS
@@ -142,10 +134,8 @@ pm2 start app.js
   mysql -h [RDS Endpoint] -u [user name] -p [database name] -e "source /디렉토리 위치/*.sql"
   ```
 
-  
 
 <br>
-
 
 
 ## 4-1. local에서 AWS RDS에 접속 안되는 오류
@@ -168,15 +158,13 @@ pm2 start app.js
 
 
 
-
-
 ## +a] 2번에서 EC2 instance에 git clone시 궁금증
 
 * git clone의 경우 public repository에서는 config 없이도 동작하나, private repository에서는 config해야 동작한다고 함
 * 그런데, private repository를 ec2 instance로 clone할 때, 내 계정으로 clone하면 이후 해당 private repository에 다른 참가자들은 clone된 private repository에 접근할 때 어떤 방식으로 접근이 되는 것인가? 
   * 내 계정을 덮어쓰는 방식인가? 
   * 혹은 clone된 private repository를 push, pull 등의 기타 작업을 수행할 때마다 매번 id와 token을 입력하라고 창이 뜨는 것인가? 
-  * 아직 잘 모르겠다.
+  * ~~아직 잘 모르겠다.~~   -> push의 경우는 잘 모르겠으나, pull을 할 때는 매번 id와 Token을 입력하라는 창이 뜬다.
 
 
 
