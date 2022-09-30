@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.09.25
+* 최종 업데이트: 22.09.30
 
 <br>
 
@@ -17,7 +17,6 @@
 * 폴더와 파일명은 최대한 영어로 작성하려고 노력한다
 * 출처를 명확히 표기하고, 원작자가 참고를 허용하는 자료만 사용한다
 * 강의 내용 정리는 되도록 따로 repository를 파서 그곳에 정리하기
-* 분류는 매주 주말에 시행하기
 
 
 
@@ -27,7 +26,7 @@
 * [AWS 공식 문서에서 자주 등장하는 용어 정리](https://github.com/Moojun/TIL/blob/main/AWS/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.md)
 * [AWS 내에서 https 연결 활성화](https://github.com/Moojun/TIL/blob/main/AWS/Study/22-07-29-enable_https.md)
 * [EC2에 Node.js 프로젝트 배포-기초](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20Nodejs%20%EB%B0%B0%ED%8F%AC.md)
-* [EC2에 Node.js Express 프로젝트 올리기](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20Nodejs%20Express%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0.md)
+* [EC2에 Node.js Express 프로젝트 올리기 + RDS](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20Nodejs%20Express%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0.md)
 
 
 
@@ -40,6 +39,9 @@
   * [Cannot find symbol class](https://github.com/Moojun/TIL/blob/main/Android/cannot_find_symbol_error.md)
   * [The emulator process for avd has terminated](https://github.com/Moojun/TIL/blob/main/Android/emulator_process_terminated_error.md)
 
+
+## Computer System Architecture
+* [Address space(주소 공간)](https://github.com/Moojun/TIL/blob/main/Computer%20Architecture/Address-Space.md)
 
 
 
@@ -63,6 +65,7 @@
 * [SQL 명령어 일부 정리](https://github.com/Moojun/TIL/blob/main/MySQL/SQL_Command.md)
 * [SUBSTRING()](https://github.com/Moojun/TIL/blob/main/MySQL/SUBSTRING().md)
 * [MySQL Query background 실행](https://github.com/Moojun/TIL/blob/main/MySQL/run-background.md)
+* [MySQL Workbench 사용 Tip](https://github.com/Moojun/TIL/blob/main/MySQL/WorkBench_Tip.md)
 
 
 
@@ -70,12 +73,6 @@
 
 * [Screen](https://github.com/Moojun/TIL/blob/main/Server/Ubuntu/Screen.md)
 * [서버 팬 속도 조절](https://github.com/Moojun/TIL/blob/main/Server/Ubuntu/control-fan-speed.md)
-
-
-
-## System Programming
-
-* [Address space(주소 공간)](https://github.com/Moojun/TIL/blob/main/System%20Progarmming/Address-Space.md)
-
+* [Linux 명령어 기록](https://github.com/Moojun/TIL/blob/main/Server/Ubuntu/Linux-command.md)
 
 
