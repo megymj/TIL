@@ -5,6 +5,12 @@
 # Java에서 문자열 입력받기
 In Java, Scanner and BufferedReader class are sources that serve as ways of reading inputs.
 
+
+
+<br>
+
+
+
 ## 1. BufferedReader vs Scanner in Java
 
 1. **Buffer Memory:** BufferedReader has larger buffer memory(8KB or 8192 chars) than Scanner which has (1KB or 1024 chars). It means if you are reading a large String than you should use BufferedReader. If the user input is short or other than String, you can use Scanner.
@@ -30,7 +36,15 @@ using `nextShort(), nextLong(), nextInt()` methods. BufferedReader can only read
 9. Scanner는 Space, Enter 모두 경계로 입력값을 인식하는 반면, BufferedReader는 Enter만을 경계로 입력값을 인식한다.
 
 
+
+<br>
+
+
+
 ## 2. Example
+
+
+
 ### 2-1. BufferedReader
 ```java
 import java.io.BufferedReader;
@@ -80,7 +94,9 @@ public class Main {
 ```
 
 
+
 ### 2-2. StringTokenizer
+
 * BufferedReader의 단점은 개행(\n)밖에 구분하지 못하는 것이다. 입력값으로 "Hello World"가 주어지면 buffer는 
 Hello와 World를 구분하지 못하는데, 이를 도와주는 것이 StringTokenzier이다. 
 * StringTokenizer st = new StringTokenizer(br.readLine(), "구분자 혹은 공백");
@@ -110,6 +126,8 @@ public static void main(String[] args) throws IOException {
 
         }
 ```
+
+
 
 #### 2-2-1. StringTokenizer 2번 사용
 
@@ -154,4 +172,10 @@ public class Main {
         br.close();
     }
 }
+```
 
+-> 여기서 왜 for문을 반복할 때 마다 StringTokenizer를 새로 생성해야 하는지 처음에는 이해가 되지 않았으나, [ tistory blog](https://kephilab.tistory.com/99) 해당 링크를 참고해서 대략적으로 이해한 것 같다.
+
+내가 이해한 것은, `StringTokenizer st = new StringTokenizer(br.readLine(), " ");` 와 같이 StringTokenizer 객체를 생성하면, br.readLine() 로 받아오는 문자열을 `st.nextToken()` 을 사용하여 하나씩 토큰을 꺼내온다. 따라서, 받아오는 문자열이 끝나면, 즉 st 객체에서 더 이상 가져올 토큰이 없다면, nextToken() 메소드는 java.util.NoSuchElementException 예외를 발생시킨다.
+
+따라서, 반복문에서 문자열을 받아올 때 마다, StringTokenizer 객체를 생성해야 한다.
