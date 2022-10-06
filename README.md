@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.09.30
+* 최종 업데이트: 22.10.06
 
 <br>
 
@@ -74,5 +74,10 @@
 * [Screen](https://github.com/Moojun/TIL/blob/main/Server/Ubuntu/Screen.md)
 * [서버 팬 속도 조절](https://github.com/Moojun/TIL/blob/main/Server/Ubuntu/control-fan-speed.md)
 * [Linux 명령어 기록](https://github.com/Moojun/TIL/blob/main/Server/Ubuntu/Linux-command.md)
+* [Certbot SSL 재발급 및 갱신](https://github.com/Moojun/TIL/blob/main/Server/Ubuntu/certbot.md)
 
 
+
+## git
+
+* [Pull Request And Issue](https://github.com/Moojun/TIL/blob/main/git/Pullrequest_and_Issue.md)
