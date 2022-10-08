@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.10.06
+* 최종 업데이트: 22.10.09
 
 <br>
 
@@ -52,6 +52,7 @@
 * [Varaible Type](https://github.com/Moojun/TIL/blob/main/Java/Variable_Type.md)
 * [JVM, JRE, JDK의 차이](https://github.com/Moojun/TIL/blob/main/Java/JVM-JRE-JDK.md)
 * [JDBC 사용 예제#1](https://github.com/Moojun/TIL/blob/main/Java/JDBC%231.md)
+* [문자열 입력받기: BufferedReader, StringTokenizer](https://github.com/Moojun/TIL/blob/main/Java/BufferedReader_and_StringTokenizer.md)
 
 
 
