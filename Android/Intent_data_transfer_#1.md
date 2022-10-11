@@ -509,7 +509,7 @@ public class Day1PlacePlanner extends AppCompatActivity {
         cafe1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               intent.putExtra("cafe1Img", "cafe1");
+               intent.putExtra("cafe1", "cafe1");
             }
         });
 
@@ -566,7 +566,7 @@ public class Day1PlacePlanner extends AppCompatActivity {
             Set<String> keySet = bundle.keySet();   // intent 객체로 받아온 전체 keySet
 
             for (String s : keySet) {
-  									switch (s) {
+  		switch (s) {
                     case "att1":
                         att1.setVisibility(View.VISIBLE);
                         break;
