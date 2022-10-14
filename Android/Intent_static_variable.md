@@ -122,7 +122,6 @@ public class PlacePlanner extends AppCompatActivity {
         cafe1 = (RelativeLayout) findViewById(R.id.cafe1);
       
         // RelativeLayout 을 클릭 시 이미지들을 저장하도록 하는 Intent 객체를 불러온다.
-        PlaceIntent.placeIntent = new Intent();
         PlaceIntent.placeIntent.setClass(PlacePlanner.this, SelectedPlanner.class);
 
         // 여기서, att1, rest1, cafe1 의 RelativeLayout 을 클릭할 때, intent 로 data 를 저장한다.
@@ -200,6 +199,31 @@ public class SelectedPlanner extends AppCompatActivity {
                 }
             }
         }
+      
+      btnNext.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    int startDay = PlaceIntent.savedDateMap.get("startDay");
+                    int endDay = PlaceIntent.savedDateMap.get("endDay");
+
+
+                    if (startDay < endDay) {
+                        // 여기서 PlacePlanner 의 날짜 값을 +1 증가시킴
+                        PlaceIntent.savedDateMap.put("startDay", startDay + 1);
+
+                        // 날짜가 변경될 때 마다 해당 날짜에 맞는 새로운 Intent 객체를 생성한다.
+                        PlaceIntent.placeIntent = new Intent();
+
+                        Intent intentBack = new Intent(SelectedPlanner.this, PlacePlanner.class);
+                        startActivity(intentBack);
+                    }
+                    else {
+                        Intent intentFinish = new Intent(SelectedPlanner.this, FinishPlanner.class);
+                        startActivity(intentFinish);
+                    }
+                }
+            });
     }
 }
 ```
@@ -208,7 +232,7 @@ public class SelectedPlanner extends AppCompatActivity {
 
 <br>
 
-## 3. removedPlaceList로 일차 마다 담긴 부분 초기화하기
+## 3. placeSavedMap로 일차 마다 담긴 부분 초기화하기
 
 ```java
 // PlaceIntent.java
@@ -216,7 +240,7 @@ public class SelectedPlanner extends AppCompatActivity {
 public class PlaceIntent {
 
     // 1일차, 2일차마다 활동 담긴 부분을 초기화해주기 위해 사용
-    static Map<String, Boolean> removedPlaceList;
+    static Map<String, Boolean> placeSavedMap;
 
     PlaceIntent() {
 
@@ -257,15 +281,15 @@ public class SelectedPlanner extends AppCompatActivity {
         System.out.println("bundle size is : " + bundle.size());
 
       
-        // 여기서 PlaceIntent.removedPlaceList를 생성한다.
-        PlaceIntent.removedPlaceList = new LinkedHashMap<>();
+        // 여기서 PlaceIntent.placeSavedMap를 생성한다.
+        PlaceIntent.placeSavedMap = new LinkedHashMap<>();
 
         if (bundle != null) {
             final Set<String> keySet = bundle.keySet();   // intent 객체로 받아온 전체 keySet
 
           	// 일단 받아온 값을 모두 true로 설정한다.
             for (String s : keySet) {
-                PlaceIntent.removedPlaceList.put(s, true);
+                PlaceIntent.placeSavedMap.put(s, true);
             }
 
             for (String s : keySet) {
@@ -295,7 +319,7 @@ public class SelectedPlanner extends AppCompatActivity {
                    cafe1.setVisibility(View.GONE);
 
                    // 여기서 bundle 객체의 데이터를 제거한다. false값을 지정.
-                    PlaceIntent.removedPlaceList.put("cafe1_key", false);
+                    PlaceIntent.placeSavedMap.put("cafe1_key", false);
                 }
             });
             attDelete1.setOnClickListener(new View.OnClickListener() {
@@ -304,7 +328,7 @@ public class SelectedPlanner extends AppCompatActivity {
                     att1.setVisibility(View.GONE);
 
                     // 여기서 bundle 객체의 데이터를 제거한다. false값을 지정.
-                    PlaceIntent.removedPlaceList.put("att1_key", false);
+                    PlaceIntent.placeSavedMap.put("att1_key", false);
                 }
             });
             restDelete1.setOnClickListener(new View.OnClickListener() {
@@ -313,7 +337,16 @@ public class SelectedPlanner extends AppCompatActivity {
                     rest1.setVisibility(View.GONE);
 
                     // 여기서 bundle 객체의 데이터를 제거한다. false값을 지정.
-                    PlaceIntent.removedPlaceList.put("rest1_key", false);
+                    PlaceIntent.placeSavedMap.put("rest1_key", false);
+                }
+            });
+          
+          imgBtnAddPlace.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent imgBtnAddIntent = new Intent(SelectedPlanner.this, PlacePlanner.class);
+                    startActivity(imgBtnAddIntent);
+                    // finish();
                 }
             });
 
@@ -353,20 +386,19 @@ public class PlacePlanner extends AppCompatActivity {
 
         
         Set<String> removedListKeySet = null;	// null로 초기화
-        if (PlaceIntent.removedPlaceList != null) {	
-            removedListKeySet = PlaceIntent.removedPlaceList.keySet();
+        if (PlaceIntent.placeSavedMap != null) {	
+            removedListKeySet = PlaceIntent.placeSavedMap.keySet();
         }
 
         if (removedListKeySet != null) {
             for (String s : removedListKeySet) {
-                if (!PlaceIntent.removedPlaceList.get(s)) { // 값이 false이면 Intent에서 제거한다. 즉, SelectedPlanner.java 화면에서 해당 내역이 뜨지 않도록 방지한다.
+                if (!PlaceIntent.placeSavedMap.get(s)) { // 값이 false이면 Intent에서 제거한다. 즉, SelectedPlanner.java 화면에서 해당 내역이 뜨지 않도록 방지한다.
                     PlaceIntent.placeIntent.removeExtra(s);
                 }
             }
         }
 
     }
-
 }
 ```
 
@@ -399,6 +431,21 @@ public class PlaceIntent {
                 public void onClick(View view) {
                     int startDay = PlaceIntent.savedDateMap.get("startDay");
                     int endDay = PlaceIntent.savedDateMap.get("endDay");
+                  
+                  // 사용자가 게시물을 삭제한 뒤 '다음' 버튼을 눌렀을 때, 삭제된 내역이 반영되지 않는 오류를 수정
+                    Set<String> checkRemovedSet = PlaceIntent.placeSavedMap.keySet();
+                    for (String s : checkRemovedSet) {
+                        if (keySet.contains(s) && !PlaceIntent.placeSavedMap.get(s)) {
+                            keySet.remove(s);
+                        }
+                    }
+                  
+                  // 사용자가 선택한 게시물이 하나도 없는 경우, 다음 화면으로 넘어가지 못하도록 방지
+                    if (keySet.size() == 0) {
+                        Toast.makeText(getApplicationContext(), "활동을 하나 이상 선택하세요!",
+                                Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
                     // 각 일차마다 저장된 값을 Place.savedPlacesMap 에 넣어준다.
                     LinkedList<String> list = new LinkedList<>();
