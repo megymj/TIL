@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.10.09
+* 최종 업데이트: 22.10.26
 
 <br>
 
@@ -32,9 +32,13 @@
 
 ## Android
 
-* 학습
-  * [안드로이드 구조](https://github.com/Moojun/TIL/blob/main/Android/Architecture.md)
-  * [Layout](https://github.com/Moojun/TIL/blob/main/Android/Layout.md)
+
+* [안드로이드 구조](https://github.com/Moojun/TIL/blob/main/Android/Architecture.md)
+* [Layout](https://github.com/Moojun/TIL/blob/main/Android/Layout.md)
+* [Intent로 데이터를 다음 Activity로 전달하여 ImageView 객체를 동적으로 생성하기](https://github.com/Moojun/TIL/blob/main/Android/Intent_data_transfer_%231.md)
+
+* [static 변수를 사용해서 Intent 결과 값 저장하기](https://github.com/Moojun/TIL/blob/main/Android/Intent_static_variable.md)
+
 * Error 
   * [Cannot find symbol class](https://github.com/Moojun/TIL/blob/main/Android/cannot_find_symbol_error.md)
   * [The emulator process for avd has terminated](https://github.com/Moojun/TIL/blob/main/Android/emulator_process_terminated_error.md)
@@ -58,11 +62,11 @@
 
 ## MySQL
 
-* [mysqldump](https://github.com/Moojun/TIL/blob/main/MySQL/Backup.md)
+* [data 백업 및 복원: mysqldump](https://github.com/Moojun/TIL/blob/main/MySQL/Backup.md)
 * [INSERT INTO](https://github.com/Moojun/TIL/blob/main/MySQL/Data_Insert(INSERT).md)
 * [import LongString](https://github.com/Moojun/TIL/blob/main/MySQL/Import_LongString.md)
 * [Index](https://github.com/Moojun/TIL/blob/main/MySQL/Many_rows_update.md)
-* [INTO OUTFILE](https://github.com/Moojun/TIL/blob/main/MySQL/MySQL%5D%20INTO%20OUTFILE.md)
+* [.sql 결과를 .csv 파일로 저장: INTO OUTFILE](https://github.com/Moojun/TIL/blob/main/MySQL/MySQL%5D%20INTO%20OUTFILE.md)
 * [SQL 명령어 일부 정리](https://github.com/Moojun/TIL/blob/main/MySQL/SQL_Command.md)
 * [SUBSTRING()](https://github.com/Moojun/TIL/blob/main/MySQL/SUBSTRING().md)
 * [MySQL Query background 실행](https://github.com/Moojun/TIL/blob/main/MySQL/run-background.md)
