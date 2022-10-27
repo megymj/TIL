@@ -11,6 +11,7 @@
 * [Java Beans action tag: useBean, setProperty](https://m.blog.naver.com/heartflow89/221006593791)
 * [Java Beans 개념](https://power-girl0-0.tistory.com/m/43)
 * [Java Beans 규약](https://greensky0026.tistory.com/m/245)
+* [스크립트릿 vs JSTL, 무엇을 사용하는 것이 좋을 지에 대한 여러 의견들](https://okky.kr/articles/440082)
 
 
 
@@ -34,7 +35,11 @@
 
 ## 프로그래밍 언어론
 
+* [week3. Context-Free Grammer: example of Left-most and Right-most Derivation](https://www.tutorialspoint.com/automata_theory/context_free_grammar_introduction.htm)
+
 * [week4. Static Scoping vs Dynamic Scoping 차이점 설명](https://stackoverflow.com/questions/22394089/static-lexical-scoping-vs-dynamic-scoping-pseudocode)
+* [week5. Memory: heap vs stack](https://junghyun100.github.io/힙-스택차이점/)
+* [week7. Example of Parameter Passing](https://courses.cs.washington.edu/courses/cse505/99au/imperative/parameters.html)
 
 
 
