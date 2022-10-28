@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.10.26
+* 최종 업데이트: 22.10.28
 
 <br>
 
@@ -86,3 +86,5 @@
 ## git
 
 * [Pull Request And Issue](https://github.com/Moojun/TIL/blob/main/git/Pullrequest_and_Issue.md)
+
+* [branch를 사용하며 겪은 문제 및 해결 내역들 정리](https://github.com/Moojun/TIL/blob/main/git/branch.md)
