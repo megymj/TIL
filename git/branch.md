@@ -31,3 +31,26 @@ develop_moojun] git merge develop_kbs
 <img width="837" alt="branch2" src="https://user-images.githubusercontent.com/80478750/198585427-291dcb67-1b1e-444b-abef-cc3f3700481e.png">
 
 
+
+```bash
+# 시도 1. git reset hard로 52839c5 commit으로 이동한 뒤, git force
+git reset --hard 52839c5
+git push --force 
+# 결과: 실패
+
+# 아래 커맨드를 사용해 다시 head가 가리키는 것을 맨 위의 커밋으로 지정함.
+git merge develop_kbs
+git push
+
+# 시도 2. develop_moojun, develop_kbs 두 branch를 모두 git reset hard로 52839c5 commit으로 이동한 뒤, 각각 git force
+git reset --hard 52839c5
+git push --force 
+git checkout develop_kbs
+git reset --hard 52839c5
+git push --force 
+# 결과: 해결
+```
+
+###### 해결한 이후 소스트리 상에서의 사진
+
+<img width="837" alt="branch3" src="https://user-images.githubusercontent.com/80478750/198588836-c7a89b10-32a7-4c04-ab02-43b01ee9ef12.png">
