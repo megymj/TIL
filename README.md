@@ -36,9 +36,7 @@
 * [안드로이드 구조](https://github.com/Moojun/TIL/blob/main/Android/Architecture.md)
 * [Layout](https://github.com/Moojun/TIL/blob/main/Android/Layout.md)
 * [Intent로 데이터를 다음 Activity로 전달하여 ImageView 객체를 동적으로 생성하기](https://github.com/Moojun/TIL/blob/main/Android/Intent_data_transfer_%231.md)
-
 * [static 변수를 사용해서 Intent 결과 값 저장하기](https://github.com/Moojun/TIL/blob/main/Android/Intent_static_variable.md)
-
 * Error 
   * [Cannot find symbol class](https://github.com/Moojun/TIL/blob/main/Android/cannot_find_symbol_error.md)
   * [The emulator process for avd has terminated](https://github.com/Moojun/TIL/blob/main/Android/emulator_process_terminated_error.md)
@@ -86,5 +84,4 @@
 ## git
 
 * [Pull Request And Issue](https://github.com/Moojun/TIL/blob/main/git/Pullrequest_and_Issue.md)
-
 * [branch를 사용하며 겪은 문제 및 해결 내역들 정리](https://github.com/Moojun/TIL/blob/main/git/branch.md)
