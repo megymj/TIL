@@ -54,3 +54,17 @@ git push --force
 ###### 해결한 이후 소스트리 상에서의 사진
 
 <img width="837" alt="branch3" src="https://user-images.githubusercontent.com/80478750/198588836-c7a89b10-32a7-4c04-ab02-43b01ee9ef12.png">
+
+
+
+<br>
+
+
+
+### 2. git rebase 를 사용하여 변경 내역을 수정하는 중 rebase를 중단하고 싶을 때
+
+```bash
+# --abort 옵션을 지정하여 rebase 명령어를 실행하면 rebase 를 중지할 수 있다.
+git rebase --abort
+```
+
