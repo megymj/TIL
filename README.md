@@ -22,13 +22,20 @@
 
 ## AWS
 
+### 개발 환경 구축
+
 * [AWS 가입 후 초기 세팅](https://github.com/Moojun/TIL/blob/main/AWS/AWS_initial_settings.md)
 * [AWS 공식 문서에서 자주 등장하는 용어 정리](https://github.com/Moojun/TIL/blob/main/AWS/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.md)
-* [AWS 내에서 https 연결 활성화](https://github.com/Moojun/TIL/blob/main/AWS/Study/22-07-29-enable_https.md)
 * [EC2에 Node.js 프로젝트 배포-기초](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20Nodejs%20%EB%B0%B0%ED%8F%AC.md)
 * [EC2에 Node.js Express 프로젝트 올리기 + RDS](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20Nodejs%20Express%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0.md)
+
+
+
+### 공부 내역
+
 * [RDS에 데이터 백업하기](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/RDS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0.md)
 * [Network ACl vs Security Group 차이점](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/RDS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0.md)
+* [AWS 내에서 https 연결 활성화](https://github.com/Moojun/TIL/blob/main/AWS/Study/22-07-29-enable_https.md)
 
 
 
