@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.10.28
+* 최종 업데이트: 22.11.05
 
 <br>
 
@@ -27,6 +27,8 @@
 * [AWS 내에서 https 연결 활성화](https://github.com/Moojun/TIL/blob/main/AWS/Study/22-07-29-enable_https.md)
 * [EC2에 Node.js 프로젝트 배포-기초](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20Nodejs%20%EB%B0%B0%ED%8F%AC.md)
 * [EC2에 Node.js Express 프로젝트 올리기 + RDS](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20Nodejs%20Express%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0.md)
+* [RDS에 데이터 백업하기](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/RDS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0.md)
+* [Network ACl vs Security Group 차이점](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/RDS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0.md)
 
 
 
