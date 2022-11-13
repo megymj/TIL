@@ -43,6 +43,13 @@
 
 
 
+## 컴퓨터시스템구조
+
+* [week7. 10진수를 IEEE 754 표준 부동소수점으로 변환 예시](https://codetorial.net/articles/floating_point.html)
+* [week7. IEEE-754 Floating Point Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+
+
+
 
 
 ## 안드로이드

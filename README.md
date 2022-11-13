@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.11.05
+* 최종 업데이트: 22.11.13
 
 <br>
 
@@ -90,7 +90,23 @@
 
 
 
+## Settings
+
+* [Intellij Tomcat artifacts명 변경](https://github.com/Moojun/TIL/blob/main/Settings/Intellij%20Tomcat%20artifacts%20%EB%AA%85%20%EB%B3%80%EA%B2%BD.md)
+
+
+
 ## git
 
 * [Pull Request And Issue](https://github.com/Moojun/TIL/blob/main/git/Pullrequest_and_Issue.md)
 * [branch를 사용하며 겪은 문제 및 해결 내역들 정리](https://github.com/Moojun/TIL/blob/main/git/branch.md)
+
+* [Pull Request를 활용한 git 협업](https://github.com/Moojun/TIL/blob/main/git/git-%ED%98%91%EC%97%85-%EC%A0%84%EB%9E%B5.md)
+
+* [기타 내역들](https://github.com/Moojun/TIL/blob/main/git/etc.md)
+
+
+
+## Question(Not solved)
+
+* [GitHub commit 내역에서 author와 committer가 다른 경우 조치 방안](https://github.com/Moojun/TIL/blob/main/Question(Not%20Solved)/git%20rebase%20-i.md)
