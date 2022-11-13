@@ -33,8 +33,8 @@
 
 ### 공부 내역
 
-* [RDS에 데이터 백업하기](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/RDS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0.md)
-* [Network ACl vs Security Group 차이점](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/RDS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0.md)
+* [RDS에 데이터 백업하기](https://github.com/Moojun/TIL/blob/main/AWS/Study/RDS%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B0%B1%EC%97%85%ED%95%98%EA%B8%B0.md)
+* [Network ACl vs Security Group 차이점](https://github.com/Moojun/TIL/blob/main/AWS/Study/NACL%20vs%20Security%20Group.md)
 * [AWS 내에서 https 연결 활성화](https://github.com/Moojun/TIL/blob/main/AWS/Study/22-07-29-enable_https.md)
 
 
