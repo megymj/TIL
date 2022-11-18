@@ -150,9 +150,6 @@ pm2 start app.js
 
 2. RDS VPC Security Group에서, inbound rules에 MySQL 3306 port 추가
 
--> 이후에도 되지 않았으나, database 생성 후 이틀 뒤에, 추가적으로 아무것도 건드리지 않았음에도 불구하고 로컬에서 접속이 되었다.
-
-
 
 <br>
 
