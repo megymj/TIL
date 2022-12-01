@@ -12,6 +12,7 @@
 * [Java Beans 개념](https://power-girl0-0.tistory.com/m/43)
 * [Java Beans 규약](https://greensky0026.tistory.com/m/245)
 * [스크립트릿 vs JSTL, 무엇을 사용하는 것이 좋을 지에 대한 여러 의견들](https://okky.kr/articles/440082)
+* [내장 객체 영역 정리. Page vs Request vs Session vs Application](https://javabeater.tistory.com/28)
 
 
 
@@ -30,6 +31,7 @@
 
 * [Public IP vs Private IP - 1](https://nordvpn.com/ko/blog/public-ip-and-private-ip/)
 * [Public IP vs Private IP - 2](https://velog.io/@hidaehyunlee/공인Public-사설Private-IP의-차이점)
+* [Subnetting, Subnet Mask](https://limkydev.tistory.com/166)
 
 
 
@@ -47,6 +49,7 @@
 
 * [week7. 10진수를 IEEE 754 표준 부동소수점으로 변환 예시](https://codetorial.net/articles/floating_point.html)
 * [week7. IEEE-754 Floating Point Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+* [week13. cache 기본](https://inyongs.tistory.com/134)
 
 
 

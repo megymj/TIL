@@ -6,7 +6,7 @@
 
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
 
-* 최종 업데이트: 22.11.13
+* 최종 업데이트: 22.12.01
 
 <br>
 
@@ -78,6 +78,13 @@
 * [SUBSTRING()](https://github.com/Moojun/TIL/blob/main/MySQL/SUBSTRING().md)
 * [MySQL Query background 실행](https://github.com/Moojun/TIL/blob/main/MySQL/run-background.md)
 * [MySQL Workbench 사용 Tip](https://github.com/Moojun/TIL/blob/main/MySQL/WorkBench_Tip.md)
+* [Oracle에서 지원하는 ROWNUM 개념 이해 및 사용하기](https://github.com/Moojun/TIL/blob/main/MySQL/ROWNUM.md)
+
+
+
+## Python
+
+* [pandas를 사용해서 두 csv 파일의 교집합, 차집합 추출하기](https://github.com/Moojun/TIL/blob/main/Python/Pandas%EB%A1%9C%20%EB%91%90%20%EA%B0%9C%EC%9D%98%20csv%20%ED%8C%8C%EC%9D%BC%EC%97%90%EC%84%9C%20%EA%B5%90%EC%A7%91%ED%95%A9%2C%20%EC%B0%A8%EC%A7%91%ED%95%A9%20%EA%B5%AC%ED%95%98%EA%B8%B0.md)
 
 
 
@@ -100,9 +107,7 @@
 
 * [Pull Request And Issue](https://github.com/Moojun/TIL/blob/main/git/Pullrequest_and_Issue.md)
 * [branch를 사용하며 겪은 문제 및 해결 내역들 정리](https://github.com/Moojun/TIL/blob/main/git/branch.md)
-
 * [Pull Request를 활용한 git 협업](https://github.com/Moojun/TIL/blob/main/git/git-%ED%98%91%EC%97%85-%EC%A0%84%EB%9E%B5.md)
-
 * [기타 내역들](https://github.com/Moojun/TIL/blob/main/git/etc.md)
 
 
