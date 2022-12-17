@@ -46,6 +46,7 @@
 * [Layout](https://github.com/Moojun/TIL/blob/main/Android/Layout.md)
 * [Intent로 데이터를 다음 Activity로 전달하여 ImageView 객체를 동적으로 생성하기](https://github.com/Moojun/TIL/blob/main/Android/Intent_data_transfer_%231.md)
 * [static 변수를 사용해서 Intent 결과 값 저장하기](https://github.com/Moojun/TIL/blob/main/Android/Intent_static_variable.md)
+* [Emulator SD카드에 이미지 넣기](https://github.com/Moojun/TIL/blob/main/Android/Emulator%20SD%EC%B9%B4%EB%93%9C%EC%97%90%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%84%A3%EA%B8%B0.md)
 * Error 
   * [Cannot find symbol class](https://github.com/Moojun/TIL/blob/main/Android/cannot_find_symbol_error.md)
   * [The emulator process for avd has terminated](https://github.com/Moojun/TIL/blob/main/Android/emulator_process_terminated_error.md)
@@ -78,9 +79,9 @@
 * [SUBSTRING()](https://github.com/Moojun/TIL/blob/main/MySQL/SUBSTRING().md)
 * [MySQL Query background 실행](https://github.com/Moojun/TIL/blob/main/MySQL/run-background.md)
 * [MySQL Workbench 사용 Tip](https://github.com/Moojun/TIL/blob/main/MySQL/WorkBench_Tip.md)
-* [Oracle에서 지원하는 ROWNUM 개념 이해 및 사용하기](https://github.com/Moojun/TIL/blob/main/MySQL/ROWNUM.md)
+* [특정 테이블의 행 번호 붙이기 1: Oracle에서 지원하는 ROWNUM 개념 이해 및 사용하기](https://github.com/Moojun/TIL/blob/main/MySQL/ROWNUM.md)
 
-
+* [특정 테이블의 행 번호 붙이기 2: row_number() 사용]
 
 ## Python
 
@@ -97,6 +98,12 @@
 
 
 
+## Servlet
+
+* [servlet에서 alert 창 띄우기](https://github.com/Moojun/TIL/blob/main/Servlet/Servlet%EC%97%90%EC%84%9C%20script%20alert%20%EC%B0%BD%EC%9D%84%20%EB%9D%84%EC%9A%B0%EA%B3%A0%20%EC%8B%B6%EC%9D%84%20%EB%95%8C.md)
+
+
+
 ## Settings
 
 * [Intellij Tomcat artifacts명 변경](https://github.com/Moojun/TIL/blob/main/Settings/Intellij%20Tomcat%20artifacts%20%EB%AA%85%20%EB%B3%80%EA%B2%BD.md)
@@ -109,6 +116,7 @@
 * [branch를 사용하며 겪은 문제 및 해결 내역들 정리](https://github.com/Moojun/TIL/blob/main/git/branch.md)
 * [Pull Request를 활용한 git 협업](https://github.com/Moojun/TIL/blob/main/git/git-%ED%98%91%EC%97%85-%EC%A0%84%EB%9E%B5.md)
 * [기타 내역들](https://github.com/Moojun/TIL/blob/main/git/etc.md)
+* [GitHub에 올라간 커밋 되돌리기](https://github.com/Moojun/TIL/blob/main/git/GitHub%EC%97%90%20%EC%98%AC%EB%9D%BC%EA%B0%84%20commit%20%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0.md)
 
 
 
