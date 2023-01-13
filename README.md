@@ -1,11 +1,8 @@
 # Today I Learned
 
 * 그날그날 공부한 내용들을 기록한다
-
 * 단기 목표는 2022년까지 꾸준히 기록하기
-
 * [Velog 주소: @moojun3](https://velog.io/@moojun3) : Velog도 TIL과 함께 작성 중. Velog에서는 주로 Error와 관련된 내용들을 정리
-
 * 최종 업데이트: 22.12.01
 
 <br>
@@ -81,7 +78,6 @@
 * [MySQL Workbench 사용 Tip](https://github.com/Moojun/TIL/blob/main/MySQL/WorkBench_Tip.md)
 * [특정 테이블의 행 번호 붙이기 1: Oracle에서 지원하는 ROWNUM 개념 이해 및 사용하기](https://github.com/Moojun/TIL/blob/main/MySQL/ROWNUM.md)
 
-* [특정 테이블의 행 번호 붙이기 2: row_number() 사용]
 
 ## Python
 
@@ -121,5 +117,4 @@
 
 
 ## Question(Not solved)
-
 * [GitHub commit 내역에서 author와 committer가 다른 경우 조치 방안](https://github.com/Moojun/TIL/blob/main/Question(Not%20Solved)/git%20rebase%20-i.md)
