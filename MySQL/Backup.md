@@ -36,6 +36,10 @@ mysqldump -u [사용자 계정] -p [복원할 DB] < [백업된 DB].sql
 # 사용 예시
 mysqldump -u user -p test1_db < backup_test1_db.sql
 password: 12
+
+# 위의 예시가 작동되지 않는 경우 
+mysql -u user -p test1_db < backup_test1_db.sql
+password: 1234
 ```
 
 ### 2. MYSQL TABLE 백업하기
@@ -55,6 +59,10 @@ mysqldump -u [사용자 계정] -p [복원할 DB ] < [백업된 테이블].sql
 
 # 사용 예시
 mysqldump -u user -p test1_db < backup_test1_table.sql
+password: 1234
+
+# 위의 예시가 작동되지 않는 경우 
+mysql -u user -p test1_db < backup_test1_table.sql
 password: 1234
 ```
 
