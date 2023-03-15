@@ -37,13 +37,13 @@ sudo certbot renew --dry-run
 * https://certbot.eff.org/ 공식 사이트로 접속해서, `Web Hosting Project` 와 `Ubuntu 20` 을 선택한다.
 * 1번부터 7번까지 그대로 따라한다. 나의 경우, 기존에 한 번 발급받은 이력이 있어서 그런지 6번까지는 추가적으로 설치되는 것이 없었다.
   * 7번에서 ```sudo certbot certonly --standalone``` 을 사용함
-<img width="1104" alt="2" src="https://user-images.githubusercontent.com/80478750/194314786-e49a272b-3fd5-4cd6-973e-0847e9499715.png">
+  <img width="1104" alt="2" src="https://user-images.githubusercontent.com/80478750/194314786-e49a272b-3fd5-4cd6-973e-0847e9499715.png">
 
 
 * 80번 port와 관련된 오류라서, iptime 관리자 페이지로 접속하니(192.168.0.1) 도메인을 적용할 웹의 External port가 80인 반면 Internal port가 3000으로 설정되어 있었다.
 <img width="641" alt="3" src="https://user-images.githubusercontent.com/80478750/194314979-8a794298-18c7-489d-b33f-1d51bd9c4b26.png">
 
- 
+
   * 현재 프로젝트 내 설정이, port 80에서 port 3000으로 포트포워딩 하도록 설정되어 있는 상태라서, 발급을 위해 임시로 Internal port를 80으로 변경한 뒤 다시 7번 명령을 수행하니 정상적으로 발급이 되었다.
 
   * ssl 인증 키가 발급되는 경로: ```/etc/letsencrypt/live/[domain]/```
@@ -108,3 +108,26 @@ https.createServer(options, app).listen(443)
 ```bash
 sudo certbot renew --dry-run 
 ```
+
+
+
+<br>
+
+### 5. 갱신
+
+```bash
+sudo certbot renew
+```
+
+
+
+<br>
+
+### 6. certbot을 이용한 자동 갱신
+
+* 2번 과정에서, 임시로 port 번호를 변경해주는 절차가 필요하므로 자동 갱신이 불가능 한 것으로 보임
+
+
+
+
+
