@@ -81,6 +81,19 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
+#### Spring Boot 서비스의 큰 흐름
+
+<img width="813" alt="tool" src="https://user-images.githubusercontent.com/80478750/230713205-4e1e704f-94b0-4a8d-93a0-1e1e56ead283.png">
+
+* DTO(Data Transfer Object): 데이터 전송 객체. 기능은 없고 데이터를 전달만 하는 용도로 사용되는 객체를 의미한다.
+  * DTO에 기능이 있어도 상관없다. 객체의 주 목적이 데이터 전달이라면 DTO라고 할 수 있다. 
+
+* DTO의 경우 맨 마지막에 사용되는 패키지에 넣거나, 혹은 Service, Repository 등 여러 곳에서 사용된다면 따로 dto package를 만들어서 사용하는 것도 괜찮다.
+
+
+
+
+
 #### 계층형 구조 예시
 
 <img width="705" alt="img1" src="https://user-images.githubusercontent.com/80478750/230712284-55765a17-645a-44da-a6c5-990c80c06d75.png">
@@ -98,3 +111,9 @@ public Optional<Member> findByLoginId(String loginId) {
 * 패키지 구조에 정답은 없다. 프로젝트가 성장함에 따라 프로젝트 구조도 현재 상황에 맞추어 성장하고 변경된다. 
 * [Spring Guide - 패키지 구조 가이드](https://cheese10yun.github.io/spring-guide-directory/) 링크를 참고하면, 최근 기술 동향에서는 도메인형 구조가 더 적합하다고 한다. 
 * 단순히 개인 혹인 팀 프로젝트에서는 계층형 구조가 더 나아 보일 수 있지만, 예를 들어 controller package 내에 controller class가 여러 개가 생성되는 경우, 도메인형 구조로 변경하는 것이 나을 것으로 보인다. 
+
+
+
+#### 기타
+
+* `hexagonal architecture` 라는 개념이 존재하는데, 이는 추후에 알아볼 것
