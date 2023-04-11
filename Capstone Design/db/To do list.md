@@ -21,3 +21,35 @@
 
 이 경우 테이블을 어떻게 설계할 것인가. 추후 생각하기
 
+
+
+
+
+### 2. Database 결정: RDB vs NoSQL
+
+> https://www.baeldung.com/hibernate-ogm
+>
+> https://www.baeldung.com/mongodb-morphia
+
+
+
+#### NoSQL: AWS DynamoDB
+
+* JPA와 NoSQL 매핑
+  * Hibernate-OGM: 2018년 이후로 업데이트가 되지 않았으며, [공식 사이트](https://hibernate.org/ogm/) 에는 `Hibernate OGM is not maintained anymore.` 라는 문구가 적혀 있다. 
+  * Morphia: MongoDB Object Document Mapping for the JVM.
+
+
+
+#### RDB: AWS RDS, AWS Aurora
+
+* JPA와 RDB 매핑
+
+
+
+
+
+### 100. 기타
+
+1. 실무에서는 Table에 id를 `table명_id` 이런 식으로 작성하는 것이 관례라고 한다. id의 경우 여러 테이블에서 사용될 수 있고 많은 경우 Primary Key로 사용되므로, `table명_id` 로 작성하는 것이 내가 생각하기에도 더 괜찮은 것 같다. 
+   * e.g) `orders table`의 `orders_id column`, ` members table`의 `member_id column`, ...

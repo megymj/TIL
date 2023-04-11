@@ -117,3 +117,55 @@ public Optional<Member> findByLoginId(String loginId) {
 #### 기타
 
 * `hexagonal architecture` 라는 개념이 존재하는데, 이는 추후에 알아볼 것
+
+
+
+
+
+### 5. Content-Type Header vs Accept Header
+
+개념에 대한 설명은 구글링 검색으로 참고하기
+
+
+
+#### Spring Framework에서 구현
+
+```java
+/**
+ * Content-Type 헤더 기반 추가 매핑 Media Type
+ * consumes="application/json"
+ * consumes="!application/json"
+ * consumes="application/*"
+ * consumes="*\/*"
+ * MediaType.APPLICATION_JSON_VALUE
+ */
+@PostMapping(value = "/mapping-consume", consumes = MediaType.APPLICATION_JSON_VALUE)
+public String mappingConsumes() {
+    log.info("mappingConsumes");
+    return "ok";
+}
+
+/**
+ * Accept 헤더 기반 Media Type
+ * produces = "text/html"
+ * produces = "!text/html"
+ * produces = "text/*"
+ * produces = "*\/*"
+ */
+@PostMapping(value = "/mapping-produce", produces = MediaType.TEXT_HTML_VALUE)
+public String mappingProduces() {
+    log.info("mappingProduces");
+    return "ok";
+}
+```
+
+
+
+
+
+
+
+### 100. 기타
+
+1. **엔티티를 설계할 때**, 실무에서는 가급적 Getter는 열어두고, Setter는 꼭 필요한 경우에만 사용하는 것을 권장한다. 즉, Lombok `@Data` 어노테이션 사용을 최대한 지양하라는 것으로 해석된다.
+   * 더 좋은 방식은, Setter는 사용하지 않고, 엔티티를 변경할 때는 비즈니스 메서드를 별도로 만드는 것이다. 이것의 장점은, 변경 지점을 Setter에 비해 명확하게 파악할 수 있다. 
