@@ -1,7 +1,5 @@
 # Fan speed 조절
 
-* 제품: Dell PowerEdge t640
-
 
 
 ```bash
