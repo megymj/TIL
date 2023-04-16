@@ -41,7 +41,9 @@
 
 
 
-#### RDB: AWS RDS, AWS Aurora
+#### RDB: AWS RDS
+
+* Amazon Aurora is a part of Amazon RDS(공식 문서)
 
 * JPA와 RDB 매핑
 
