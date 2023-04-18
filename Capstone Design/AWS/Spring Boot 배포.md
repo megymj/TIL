@@ -58,7 +58,7 @@
 
 
 
-#### 1. Intellij .jar 파일 빌드
+#### 2-1. Intellij .jar 파일 빌드
 
 ```bash
 ./gradlew clean
@@ -70,7 +70,7 @@
 
 
 
-#### 2. Dockerfile 생성
+#### 2-2. Dockerfile 생성 및 dockerhub 리포지토리 생성
 
 ```dockerfile
 FROM openjdk:11
@@ -99,29 +99,89 @@ jar {
 
 
 
+이후 dockerhub에서 repository를 생성한다. 
+
+[내 docker repository](https://hub.docker.com/r/moojun/menzil-be/tags)
 
 
 
+#### docker tag란?
 
-#### 2-1. Docker image 생성 및 dockerhub에 push
+> https://www.baeldung.com/ops/docker-tag
+
+The Docker tag helps maintain the build version to push the image to the Docker Hub**. The Docker Hub allows us to group images together based on name and tag.** Multiple Docker tags can point to a particular image. Basically, As in Git, `Docker tags are similar to a specific commit`. Docker tags are just an alias for an image ID.
 
 
 
+#### 2-3. Docker image 생성 및 dockerhub에 push
+
+```dockerfile
+# macOS M1 chip의 경우 --platform linux/amd64 옵션을 추가해야 함
+docker build --platform linux/amd64 -t moojun/menzil-be:[tag] .
+# e.g) docker build --platform linux/amd64 -t moojun/menzil-be:0.0.1 .
+
+# 정상 build 조회
+docker images
+
+# push dockerhub
+docker push moojun/menzil-be:[tag]
+```
 
 
-#### 3. EC2 기본 환경 구축
+
+#### 2-4. EC2 기본 환경 구축
 
 * EC2, Security Group 생성 및 Elastic IP 설정(내용 생략)
 * EC2에 Docker 설치
   * https://docs.docker.com/engine/install/ubuntu/
 
+* docker image pull
+
+```bash
+# pull 
+sudo docker pull moojun/menzil-be:[tag]
+
+# run docker
+sudo docker run -p 8080:8080 moojun/menzil-be:[tag]
+```
 
 
 
+#### 2-5. Docker 명령어
+
+```bash
+# 현재 이미지 확인
+docker images
+
+# 이미지 삭제
+docker rmi [image id]
+
+# 컨테이너 확인
+docker container ls -a
+
+# 동작 중인 컨테이너 확인
+docker ps
+
+# 컨테이너 삭제
+docker rm [container id]
+```
 
 
 
+### 결론
 
+* `gradle .jar build -> Dockerfile build -> image push -> image pull -> docker run` 과정을 통해 프로젝트를 EC2에 배포할 수 있다. 
+
+* 하지만 이 과정에서, 두 가지 불편한 점을 확인하였다. 
+  1. 프로젝트를 재배포 하는 과정에서, 기존에 실행 중이던 도커 컨테이너를 중단한 뒤, 새로 받은 이미지의 컨테이너를 실행해야 하는 점.
+  2. 위의 절차(gradle .jar build -> ...) 가 조금 번거롭다
+
+
+
+첫 번째의 경우 '무중단 배포' 등의 개념으로 해결할 수 있을 것 같으며, 두 번째는 어떤 방식으로 해결하면 좋을 지 생각이 나지 않음.
+
+* 궁금증
+  1. Dockerfile vs docker-compose.yml 의 차이는 무엇인가?
 
 
 
