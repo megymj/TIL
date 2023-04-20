@@ -8,7 +8,7 @@
 
 
 
-### 1. Docker
+## 1. Docker
 
 > [도커를 쓰는 이유](https://www.44bits.io/ko/post/why-should-i-use-docker-container)
 >
@@ -18,7 +18,7 @@
 
 
 
-#### 도커의 장점
+### 도커의 장점
 
 1.  Consistent Environment: Dockerfile을 통해 서버 운영기록을 코드로 남길 수 있다. 또한, 서로 다른 환경에서 Dockerfile을 통해 동일하게 실행될 수 있다.-&gt; 이는 팀원이 협업할 때, 프레임워크 버전 등 여러 버전을 일치시킬 수 있어서 쉬울 것으로 보인다. 
 2. 서버의 확장: 만약 프로젝트 규모가 커져서 서버를 옮기거나 확장해야 할 때, 도커를 사용하면 Docker Image만 가져와 새로운 서버에 동일한 환경을 쉽게 구축할 수 있다. 
@@ -26,7 +26,7 @@
 
 
 
-#### 개인 프로젝트에서 Docker를 사용해야 하는 이유?
+### 개인 프로젝트에서 Docker를 사용해야 하는 이유?
 
 현재 프로젝트에서 Docker가 사용되는 곳은 크게 두 가지임(추후 추가될 수 있음)
 
@@ -37,7 +37,7 @@
 
 
 
-### 2. Spring Boot + Docker + EC2 배포
+## 2. Spring Boot + Docker + EC2 배포
 
 > [참고 1](https://velog.io/@msung99/Docker-도커를-이용한-스프링-부트-SNAPSHOT-jar-파일-배포하기)
 >
@@ -47,7 +47,7 @@
 
 
 
-#### Docker를 사용해 EC2에 이미지가 업로드되는 절차
+### Docker를 사용해 EC2에 이미지가 업로드되는 절차
 
 <img width="762" alt="img1" src="https://user-images.githubusercontent.com/80478750/232288059-8dc184b0-8e4d-4836-9a9c-6b9f46028a24.png">
 
@@ -58,7 +58,7 @@
 
 
 
-#### 2-1. Intellij .jar 파일 빌드
+### 2-1. Intellij .jar 파일 빌드
 
 ```bash
 ./gradlew clean
@@ -70,7 +70,7 @@
 
 
 
-#### 2-2. Dockerfile 생성 및 dockerhub 리포지토리 생성
+### 2-2. Dockerfile 생성 및 dockerhub 리포지토리 생성
 
 ```dockerfile
 FROM openjdk:11
@@ -81,7 +81,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 
 
-#### build.gradle 수정
+### build.gradle 수정
 
 > [stackoverflow](https://stackoverflow.com/questions/67663728/spring-boot-2-5-0-generates-plain-jar-file-can-i-remove-it)
 
@@ -105,7 +105,7 @@ jar {
 
 
 
-#### docker tag란?
+### docker tag란?
 
 > https://www.baeldung.com/ops/docker-tag
 
@@ -113,7 +113,7 @@ The Docker tag helps maintain the build version to push the image to the Docker 
 
 
 
-#### 2-3. Docker image 생성 및 dockerhub에 push
+### 2-3. Docker image 생성 및 dockerhub에 push
 
 ```dockerfile
 # macOS M1 chip의 경우 --platform linux/amd64 옵션을 추가해야 함
@@ -129,7 +129,7 @@ docker push moojun/menzil-be:[tag]
 
 
 
-#### 2-4. EC2 기본 환경 구축
+### 2-4. EC2 기본 환경 구축
 
 * EC2, Security Group 생성 및 Elastic IP 설정(내용 생략)
 * EC2에 Docker 설치
@@ -147,7 +147,7 @@ sudo docker run -p 8080:8080 moojun/menzil-be:[tag]
 
 
 
-#### 2-5. Docker 명령어
+### 2-5. Docker 명령어
 
 ```bash
 # 현재 이미지 확인
@@ -168,7 +168,7 @@ docker rm [container id]
 
 
 
-### 결론
+## 결론
 
 * `gradle .jar build -> Dockerfile build -> image push -> image pull -> docker run` 과정을 통해 프로젝트를 EC2에 배포할 수 있다. 
 
