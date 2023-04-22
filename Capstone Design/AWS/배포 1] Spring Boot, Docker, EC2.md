@@ -1,4 +1,4 @@
-# Spring Boot 배포
+# 배포 1] Spring Boot, Docker, EC2
 
 > [참고링크1](https://bcp0109.tistory.com/356)
 >
@@ -178,7 +178,7 @@ docker rm [container id]
 
 
 
-첫 번째의 경우 '무중단 배포' 등의 개념으로 해결할 수 있을 것 같으며, 두 번째는 어떤 방식으로 해결하면 좋을 지 생각이 나지 않음.
+첫 번째의 경우 '무중단 배포' 등의 개념으로 해결할 수 있을 것 같으며, 두 번째는 GitHub Action, Jenkins 등 CI/CD 도구를 사용해서 자동화 하는 것으로 대체할 수 있을 것으로 생각한다.
 
 * 궁금증
   1. Dockerfile vs docker-compose.yml 의 차이는 무엇인가?
