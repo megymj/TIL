@@ -78,6 +78,8 @@ public Optional<Member> findByLoginId(String loginId) {
 > [인프런-"프로젝트 폴더 구조와 강의 일정에 관하여 질문"](https://www.inflearn.com/questions/16046/프로젝트-폴더-구조와-강의-일정에-관하여-질문이-있습니다)
 >
 > [Spring Guide - 패키지 구조 가이드](https://cheese10yun.github.io/spring-guide-directory/)
+>
+> [[Spring boot] 디렉터리 패키지 구조의 선택](https://velog.io/@jsb100800/Spring-boot-directory-package)
 
 
 
@@ -104,13 +106,14 @@ public Optional<Member> findByLoginId(String loginId) {
 
 <img width="712" alt="domain1" src="https://user-images.githubusercontent.com/80478750/230712285-d322a906-8553-489a-9074-b5d51b3940db.png">
 
-
+<img width="757" alt="domain2" src="https://user-images.githubusercontent.com/80478750/232785381-96ccfe4c-38dc-4775-a9f5-3295e969843d.png">
 
 #### 결론
 
 * 패키지 구조에 정답은 없다. 프로젝트가 성장함에 따라 프로젝트 구조도 현재 상황에 맞추어 성장하고 변경된다. 
 * [Spring Guide - 패키지 구조 가이드](https://cheese10yun.github.io/spring-guide-directory/) 링크를 참고하면, 최근 기술 동향에서는 도메인형 구조가 더 적합하다고 한다. 
 * 단순히 개인 혹인 팀 프로젝트에서는 계층형 구조가 더 나아 보일 수 있지만, 예를 들어 controller package 내에 controller class가 여러 개가 생성되는 경우, 도메인형 구조로 변경하는 것이 나을 것으로 보인다. 
+* **본 프로젝트에서는, [Spring Guide - 패키지 구조 가이드](https://cheese10yun.github.io/spring-guide-directory/) 그리고 [[Spring boot] 디렉터리 패키지 구조의 선택](https://velog.io/@jsb100800/Spring-boot-directory-package) 링크를 참고하여 domain / global 을 분리한 domain형 구조로 프로젝트를 진행할 계획**
 
 
 
@@ -124,7 +127,7 @@ public Optional<Member> findByLoginId(String loginId) {
 
 ### 5. Content-Type Header vs Accept Header
 
-개념에 대한 설명은 구글링 검색으로 참고하기
+개념에 대한 설명은 구글 검색 참고
 
 
 
