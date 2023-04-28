@@ -375,7 +375,7 @@ jobs:
 > [github marketplace: ssh-remote-commands](https://github.com/marketplace/actions/ssh-remote-commands)
 
 * CD의 경우 CI 보다는 단순하다. EC2 instance에 직접 접속한 뒤, docker 명령어를 실행하여 기존에 실행 중이던 컨테이너와 이미지를 제거한뒤, 새로 docker hub에서 pull 한 뒤 `-d` 옵션을 사용해서 background 로 실행시킨다.
-* `sudo docker logs [container_id]` 를 통해 background로 실행 중인 docker container의 logf를 확인할 수 있다. 
+* `sudo docker logs [container_id]` 를 통해 background로 실행 중인 docker container의 log를 확인할 수 있다. 
 
 ```yaml
 # 코드 아래에 추가

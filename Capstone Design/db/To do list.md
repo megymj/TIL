@@ -2,7 +2,7 @@
 
 
 
-### 1. Primary Key(기본 키) 설정
+## 1. Primary Key(기본 키) 설정
 
 * Natural Key
   * 비즈니스에 의미가 있는 키
@@ -17,33 +17,47 @@
 
 
 
-#### 1-1. 소셜 로그인(Google, KaKao)
+### 1-1. 소셜 로그인(Google, KaKao)
 
 > [sns로그인 db관리 질문](https://okky.kr/questions/433730)
 >
 > https://developers.google.com/identity/protocols/oauth2
 
-로그인/회원가입 직접 구현
+#### 로그인/회원가입 직접 구현
 
 * 장점: 구현을 빠르게 할 수 있다. 또한 회원 데이터를 직접 관리할 수 있다.
 * 단점: 회원가입 시 이메일 인증, 비밀번호 찾기, 비밀번호 변경, 회원정보 변경, 로그인 시 보안 문제 등을 고려해야 한다.
 
 
 
-소셜 로그인
+#### 소셜 로그인
 
 - 장점: 로그인/회원가입 직접 구현 에서의 단점들을 구글, 카카오에 맡기면 되니 서비스 개발에 집중할 수 있다.
 - 단점: 해당 부분 학습이 필요함(Oauth)
-
-
 
 -> 본 프로젝트에서는, 소셜 로그인을 사용하여 회원가입 기능을 구현하기로 하였음
 
 
 
+### 1-2. Google OAuth
+
+> [Spring Security와 OAuth2(2) - 구글 서비스 등록하고 적용하기](https://velog.io/@shawnhansh/Spring-Security와-OAuth22-구글-서비스-등록하고-적용하기)
+>
+>  [이동욱님](https://jojoldu.tistory.com/) 저서 '[스프링 부트와 AWS로 혼자 구현하는 웹 서비스](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788965402602)'
 
 
-### 2. Database 결정: RDB vs NoSQL
+
+
+
+
+
+
+
+
+
+
+
+## 2. Database 결정: RDB vs NoSQL
 
 > https://www.baeldung.com/hibernate-ogm
 >
@@ -51,7 +65,7 @@
 
 
 
-#### NoSQL: AWS DynamoDB
+### NoSQL: AWS DynamoDB
 
 * JPA와 NoSQL 매핑
   * Hibernate-OGM: 2018년 이후로 업데이트가 되지 않았으며, [공식 사이트](https://hibernate.org/ogm/) 에는 `Hibernate OGM is not maintained anymore.` 라는 문구가 적혀 있다. 
@@ -59,7 +73,7 @@
 
 
 
-#### RDB: AWS RDS
+### RDB: AWS RDS
 
 * Amazon Aurora is a part of Amazon RDS(공식 문서)
 
@@ -73,15 +87,17 @@
 
 
 
-### 3. AWS RDS 구축
+## 3. AWS RDS 구축
+
+1. RDS 생성: MySQL 8.0.28 버전, Free tier, Public Access 허용, port 번호 12000(교내에서 3306 포트는 접근이 제한되어 있으므로)
+2. Security group Inbound rules 12000 port enabled.
+3. [참고링크- 내 TIL](https://github.com/Moojun/TIL/blob/main/AWS/Develop-Environment/EC2%EC%97%90%20JSP%2C%20Servlet%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC.md) 2-3 주의사항 참고해서 RDS Time zone 변경 및 Parameter group 생성
 
 
 
 
 
-
-
-### 100. 기타
+## 100. 기타
 
 1. 실무에서는 Table에 id를 `table명_id` 이런 식으로 작성하는 것이 관례라고 한다. id의 경우 여러 테이블에서 사용될 수 있고 많은 경우 Primary Key로 사용되므로, `table명_id` 로 작성하는 것이 내가 생각하기에도 더 괜찮은 것 같다. 
    * e.g) `orders table`의 `orders_id column`, ` members table`의 `member_id column`, ...
