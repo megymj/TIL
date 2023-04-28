@@ -143,6 +143,12 @@ sudo docker pull moojun/menzil-be:[tag]
 
 # run docker
 sudo docker run -p 8080:8080 moojun/menzil-be:[tag]
+
+# Run docker background
+sudo docker run -d --name 'test1' -p 8080:8080 moojun/menzil-be:[tag]
+
+# show log
+sudo docker log [container id]
 ```
 
 
