@@ -151,19 +151,22 @@ sudo docker run -p 8080:8080 moojun/menzil-be:[tag]
 
 ```bash
 # 현재 이미지 확인
-docker images
+sudo docker images
 
 # 이미지 삭제
-docker rmi [image id]
+sudo docker rmi [image id]
 
 # 컨테이너 확인
-docker container ls -a
+sudo docker container ls -a
 
 # 동작 중인 컨테이너 확인
-docker ps
+sudo docker ps
+
+# 컨테이너 중지
+sudo docker stop [container name or id]
 
 # 컨테이너 삭제
-docker rm [container id]
+sudo docker rm [container id]
 ```
 
 
