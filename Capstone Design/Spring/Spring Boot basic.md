@@ -2,7 +2,7 @@
 
 
 
-### 1. Optional 사용
+## 1. Optional 사용
 
 * Java8 부터 사용된 기본 문법. 요즘에는 Null을 직접 반환하는 대신 값이 없으면 `Optional`을 사용하는 추세다. 
 
@@ -41,7 +41,7 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
-### 2. logback mvc
+## 2. logback mvc
 
 * 실무에서 HTTP 요청시 같은 요청의 로그에 모두 같은 식별자를 자동으로 남기는 방법
 
@@ -51,7 +51,7 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
-### 3. ConcurrentHashMap
+## 3. ConcurrentHashMap
 
 > [hashmap vs concurrenthashmap](https://javaconceptoftheday.com/hashmap-vs-concurrenthashmap-in-java/)
 >
@@ -71,7 +71,7 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
-### 4. Spring Boot Package Structure
+## 4. Spring Boot Package Structure
 
 > [Spring Boot 2.0 — Project Structure and Best Practices (Part 2)](https://medium.com/the-resonant-web/spring-boot-2-0-project-structure-and-best-practices-part-2-7137bdcba7d3)
 >
@@ -83,7 +83,7 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
-#### Spring Boot 서비스의 큰 흐름
+### Spring Boot 서비스의 큰 흐름
 
 <img width="813" alt="tool" src="https://user-images.githubusercontent.com/80478750/230713205-4e1e704f-94b0-4a8d-93a0-1e1e56ead283.png">
 
@@ -96,19 +96,19 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
-#### 계층형 구조 예시
+### 계층형 구조 예시
 
 <img width="705" alt="img1" src="https://user-images.githubusercontent.com/80478750/230712284-55765a17-645a-44da-a6c5-990c80c06d75.png">
 
 
 
-#### 도메인형 구조 예시
+### 도메인형 구조 예시
 
 <img width="712" alt="domain1" src="https://user-images.githubusercontent.com/80478750/230712285-d322a906-8553-489a-9074-b5d51b3940db.png">
 
 <img width="757" alt="domain2" src="https://user-images.githubusercontent.com/80478750/232785381-96ccfe4c-38dc-4775-a9f5-3295e969843d.png">
 
-#### 결론
+### 결론
 
 * 패키지 구조에 정답은 없다. 프로젝트가 성장함에 따라 프로젝트 구조도 현재 상황에 맞추어 성장하고 변경된다. 
 * [Spring Guide - 패키지 구조 가이드](https://cheese10yun.github.io/spring-guide-directory/) 링크를 참고하면, 최근 기술 동향에서는 도메인형 구조가 더 적합하다고 한다. 
@@ -117,7 +117,7 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
-#### 기타
+### 기타
 
 * `hexagonal architecture` 라는 개념이 존재하는데, 이는 추후에 알아볼 것
 
@@ -125,13 +125,13 @@ public Optional<Member> findByLoginId(String loginId) {
 
 
 
-### 5. Content-Type Header vs Accept Header
+## 5. Content-Type Header vs Accept Header
 
 개념에 대한 설명은 구글 검색 참고
 
 
 
-#### Spring Framework에서 구현
+### Spring Framework에서 구현
 
 ```java
 /**
@@ -164,11 +164,15 @@ public String mappingProduces() {
 
 
 
+## 6. RestTemplate과 WebClient
+
+> [RestTemplate과 WebClient](https://tecoble.techcourse.co.kr/post/2021-07-25-resttemplate-webclient/)
+
+* 스프링 어플리케이션에서 HTTP 요청할 때 사용하는 방법으로 RestTemplate과 WebClient가 있다. 스프링 5.0 이전까지는 클라이언트에서 HTTP 접근을 위해 사용한 것은 RestTemplate 이었다. 스프링 5.0 에서 WebClient가 나왔고 현재는 WebClient를 사용하기를 권고하고 있다. 
 
 
 
-
-### 100. 기타
+## 100. 기타
 
 1. **엔티티를 설계할 때**, 실무에서는 가급적 Getter는 열어두고, Setter는 꼭 필요한 경우에만 사용하는 것을 권장한다. 즉, Lombok `@Data` 어노테이션 사용을 최대한 지양하라는 것으로 해석된다.
    * 더 좋은 방식은, Setter는 사용하지 않고, 엔티티를 변경할 때는 비즈니스 메서드를 별도로 만드는 것이다. 이것의 장점은, 변경 지점을 Setter에 비해 명확하게 파악할 수 있다. 
