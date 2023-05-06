@@ -24,8 +24,6 @@
 
 ## 2. Google OAuth
 
-
-
 ### 구글 OAuth 로그인 구현은 크게 두 가지 방식으로 나눠지는 것으로 보인다.
 
 ### 2-1. REST API 방식
@@ -57,13 +55,15 @@
 >
 > [Spring Boot 게시판 OAuth 2.0 구글 로그인 구현](https://dev-coco.tistory.com/128#head6)
 >
->  [Springboot 구글 OAuth2 로그인 + JWT](https://velog.io/@rudwhd515/Springboot-JWT)
+> [Springboot 구글 OAuth2 로그인 + JWT](https://velog.io/@rudwhd515/Springboot-JWT)
+>
+> [구글, 카카오, 네이버, 페이스북 로그인 기본 절차](https://developerbee.tistory.com/245), [[Spring Boot] OAuth2 소셜 로그인 가이드 (구글, 페이스북, 네이버, 카카오)](https://deeplify.dev/back-end/spring/oauth2-social-login)
 
 * `OAuth2UserService<OAuth2UserRequest, OAuth2User>` or `DefaultOAuth2UserService` 인터페이스를 상속받아 `loadUser` 메소드를 Override해서 `userRequest` 정보를 받아 오는 방식
 
 
 
-#### 이 중 첫 번째 방식으로, 공식 문서를 참고하여 코드를 작성하였음.
+#### 이 중 REST API를 구현하는 방식으로 공식 문서를 참고하여 코드를 작성하였음.
 
 * 참고한 공식 문서: https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps?hl=ko 
 
@@ -73,7 +73,76 @@
 
 
 
-### 2-3. 서비스 회원가입 이후 사용자에게 추가 정보 입력받기
+
+
+
+
+## 3. KaKao OAuth
+
+### KaKao OAuth 로그인 구현 방식 역시 두 가지 방식으로 나눠진다.
+
+### 3-1. Rest API 방식
+
+> [[Spring Boot] 카카오 OAuth2.0 구현하기](https://velog.io/@leesomyoung/Spring-Boot-%EC%B9%B4%EC%B9%B4%EC%98%A4-OAuth2.0-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
+>
+> [[Kakao Login API] 카카오 계정의 유저 정보 받아오기 및 마무리 (Spring Boot 환경에서 카카오 로그인 API RESTful방식으로 연동하기 -4장 마무리) (0)](https://antdev.tistory.com/37)
+
+
+
+
+
+### 3-2. 인증된 OAuth2User 객체를 반환받아 처리하는 방식
+
+> [구글, 카카오, 네이버, 페이스북 로그인 기본 절차](https://developerbee.tistory.com/245), [[Spring Boot] OAuth2 소셜 로그인 가이드 (구글, 페이스북, 네이버, 카카오)](https://deeplify.dev/back-end/spring/oauth2-social-login)
+
+
+
+### 구글 로그인 구현과 마찬가지로 REST API를 구현하는 방식으로 공식 문서를 참고하여 코드를 작성하였음.
+
+* [REST API | Kakao Developers](https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#req-user-info) 참고
+* 카카오 Auth Server에 Access token을 요청한 다음 카카오 유저 데이터를 받아오는 과정(https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#req-user-info)에서, ObjectMapper 를 사용해서 JSON 데이터를 Java dto 객체로 변환하였는데, 이 때 내부 클래스를 중첩해서 사용해야 하는 상황이 발생해서 코드가 지저분해졌다.
+  * [[Java] ObjectMapper를 이용하여 JSON 파싱하기 ](https://velog.io/@zooneon/Java-ObjectMapper를-이용하여-JSON-파싱하기#내가-시도했던-방법-세-번째) 참고
+
+```java
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)   
+public class KaKaoOAuthUser {
+
+    private String id;  
+    private KakaoAccount kakaoAccount;
+
+    @Getter
+    @NoArgsConstructor
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+    public static class KakaoAccount {
+        private Profile profile;
+        private String email;
+
+        @Getter
+        @NoArgsConstructor
+        @JsonIgnoreProperties(ignoreUnknown = true)
+        public static class Profile {
+            private String nickname;
+        }
+    }
+}
+```
+
+
+
+#### P.S] 현재 프론트 팀은 Next.js를 사용하는데, NextAuth.js 라이브러리를 사용하면 Google, Facebook, Kakao, LINE, Instagram 등 소셜 로그인 기능을 쉽게 구현할 수 있다...
+
+* https://next-auth.js.org/getting-started/client
+* 그래도 일단 서버에서 Google 로그인 절차를 개발했으므로 서버에서 소셜 로그인 처리를 진행하는 것으로 진행할 계획.
+
+
+
+## 4. 서비스 회원가입 이후 사용자에게 추가 정보 입력받기
 
 <img width="595" alt="google login" src="https://user-images.githubusercontent.com/80478750/235340267-241d08e8-a6c2-4cfd-95c1-3dc85b4faddd.png">
 
@@ -107,7 +176,7 @@
 
 
 
-### 2-4. JWT. Access Token, Refresh Token을 사용한 인증
+## 5. JWT. Access Token, Refresh Token을 사용한 인증
 
 > [JWT. Access Token, Refresh Token 설명](https://ksh-coding.tistory.com/58)
 

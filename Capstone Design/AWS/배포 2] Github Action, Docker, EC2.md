@@ -247,6 +247,8 @@ jobs:
 
 ### 2. application.yml 숨기기
 
+* Spring Boot 프로젝트를 GitHub에 올릴 때, *.properties 혹은 *.yml 파일에 있는 정보. 예를 들면, database의 url, user, password 정보 등을 올리면 보안상에 문제가 발생한다. 따라서 위의 파일은 `.gitignore`에 등록하여 숨기고 GitHub에 업로드하면 안된다.
+
 * 현재 프로젝트에서는, main > resources > application.yml 은 GitHub에 업로드 하였고, 해당 파일에서 application-database.yml, application-oauth.yml 파일을 import 하도록 작성하였으며, import 하는 이 두 파일은 .gitignore에 등록하였다. 
 
 ```yaml
@@ -265,9 +267,11 @@ spring:
 
 ### GitHub Secrets에 yaml 파일 등록할 때 주의사항
 
-1. application-database.yml 등 yml 파일을 먼저 Base64로 인코딩 한 뒤, 인코딩 한 값을 secret에 저장한다.
-   * [Base64 Encoding sites](https://www.convertstring.com/ko/EncodeDecode/Base64Encode)
-2. 이후 github action 코드 작성
+1. ~~application-database.yml 등 yml 파일을 먼저 Base64로 인코딩 한 뒤, 인코딩 한 값을 secret에 저장한다.~~
+   * ~~[Base64 Encoding sites](https://www.convertstring.com/ko/EncodeDecode/Base64Encode)~~
+2. ~~이후 github action 코드 작성~~
+
+#### 확인 결과 굳이 Base 64로 Encoding 하지 않아도 동작한다.
 
 
 
@@ -279,9 +283,9 @@ spring:
 >
 > https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts
 
-* 주석 처리된 `name: upload application-database-test.yml` 에서, Github secret 정보가 base 64로 decoding이 정상적으로 완료되는지 확인하기 위해 파일을 올리는 명령을 추가하였으나, 0 bytes로 업로드되는, 즉 데이터가 저장되지 않는 현상이 발생하였다. 
-* 위의 두 링크를 참고한 결과, 명확한 내용은 나오지 않았지만 아마 내 생각으로는 한번 GitHub Secrets에 정보가 저장되면 이후 해당 정보들은 확인할 수 없으며, github action 작동 시에만 반영되어서 동작하는 것으로 보인다.
-* 따라서 GitHub Secrets의 정보가 잘 불러오는지는 추후 개발을 진행해야 확인할 수 있을 것으로 보인다. 
+* ~~주석 처리된 `name: upload application-database-test.yml` 에서, Github secret 정보가 base 64로 decoding이 정상적으로 완료되는지 확인하기 위해 파일을 올리는 명령을 추가하였으나, 0 bytes로 업로드되는, 즉 데이터가 저장되지 않는 현상이 발생하였다.~~
+* ~~위의 두 링크를 참고한 결과, 명확한 내용은 나오지 않았지만 아마 내 생각으로는 한번 GitHub Secrets에 정보가 저장되면 이후 해당 정보들은 확인할 수 없으며, github action 작동 시에만 반영되어서 동작하는 것으로 보인다.~~
+* `secrets 의 정보도 object 정보로 정상적으로 업로드 되는 것을 확인함`
 
 ````yaml
 name: Java CI with Gradle in main branch
@@ -312,17 +316,17 @@ jobs:
     - name: make application-database.yml
       run: |
         touch src/main/resources/application-database.yml 
-        echo "${{env.APPLICATION_DATABASE}}" | base64 --decode > src/main/resources/application-database.yml
+        echo "${{secrets.APPLICATION_DATABASE}}" > src/main/resources/application-database.yml
 
-    - name: make application-oauth.yml
+    - name: make application-security.yml
       run: |
-        touch src/main/resources/application-oauth.yml 
-        echo "${{env.APPLICATION_OAUTH}}" | base64 --decode > src/main/resources/application-oauth.yml
+        touch src/main/resources/application-security.yml 
+        echo "${{secrets.APPLICATION_OAUTH}}" > src/main/resources/application-security.yml
 
     - name: make test/resources/application-database-test.yml
       run: |
         touch src/test/resources/application-database-test.yml 
-        echo "${{env.APPLICATION_TEST}}" | base64 --decode > src/test/resources/application-database-test.yml
+        echo "${{secrets.APPLICATION_TEST}}" > src/test/resources/application-database-test.yml
 
     # - name: upload application-database-test.yml
     #   uses: actions/upload-artifact@v3
@@ -375,6 +379,7 @@ jobs:
 > [github marketplace: ssh-remote-commands](https://github.com/marketplace/actions/ssh-remote-commands)
 
 * CD의 경우 CI 보다는 단순하다. EC2 instance에 직접 접속한 뒤, docker 명령어를 실행하여 기존에 실행 중이던 컨테이너와 이미지를 제거한뒤, 새로 docker hub에서 pull 한 뒤 `-d` 옵션을 사용해서 background 로 실행시킨다.
+* EC2의 Security group > Inbound rule 에서 22번 port를 열어 놓았기 때문에 `ssh-action` 으로 접속이 가능하다.
 * `sudo docker logs [container_id]` 를 통해 background로 실행 중인 docker container의 log를 확인할 수 있다. 
 
 ```yaml
@@ -408,6 +413,8 @@ jobs:
 
 
 <br>
+
+
 
 
 

@@ -4,7 +4,7 @@
 
 
 
-### 1. Hibernate vs Spring Data JPA
+## 1. Hibernate vs Spring Data JPA
 
 > [[JPA] JPA와 Hibernate 그리고 Spring Data JPA](https://dev-coco.tistory.com/74)
 >
@@ -22,7 +22,7 @@
 
 
 
-### 2. ddl-auto 옵션 관련 주의 사항
+## 2. ddl-auto 옵션 관련 주의 사항
 
 > [ddl-auto 옵션 관련 주의할 점](https://smpark1020.tistory.com/140)
 >
@@ -64,3 +64,20 @@ spring:
 * 특히, 운영 서버에는 절대 **create**, **create-drop**, **update** 를 사용하면 안된다!
 * 개발 초기 단계는 **create** or **update**. 왜냐하면 처음에는 테이블의 스키마가 없기 때문이다(db에서 직접 `create table` 문으로 생성하지 않은 이상은)
 * 테스트 서버는 **update** 또는 **validate**.
+
+
+
+## 3. Entity는 직접 반환하지 않는다.
+
+* Entity를 변경하는 순간 API 스펙이 변경될 수 있으므로, dto로 변환을 해서 controller로 반환을 하는 것을 권장한다. 
+
+
+
+
+
+## 4. @NotNull vs @Column(nullable = false) 
+
+> [[JPA] nullable=false와 @NotNull 비교, Hibernate Validation](https://kafcamus.tistory.com/15)
+
+* @NotNull은 Spring Bean Validation이고, @Column(nullable = false)는 DDL 생성 시 not null이라는 조건이 붙는 것이다.
+* 자세한 설명은 위 링크를 참고하자.
