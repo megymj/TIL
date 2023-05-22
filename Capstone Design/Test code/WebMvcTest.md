@@ -1,8 +1,10 @@
-# MockMvc
+# @WebMvcTest
 
 
 
-## UserControllerTest
+
+
+## 1. UserControllerTest
 
 ```java
 @ExtendWith(SpringExtension.class)
@@ -95,3 +97,15 @@ class UserControllerTest {
 
 * @WebMvcTest 어노테이션에 exclude ... 부분을 추가하니 테스트가 성공함
   * 하지만 이 부분을 추가해야하는 원인은 아직 모르겠다.
+  * 5/22 해당 내용과 유사한 내용의 글을 발견함. [**스프링부트 JUnit5 - Error creating bean with name 'securityConfig' defined in file 해결법**](https://pgmjun.tistory.com/75)
+
+
+
+
+
+## 2. @WebMvcTest는 Service나 Repository class를 주입 받을 수 없다. 
+
+> [테스트할 때 MockMvc 주입받는 방법](https://smpark1020.tistory.com/163)
+
+따라서 Controller만 테스트할 경우에 사용한다. 이 때, @WebMvcTest를 사용하면 MockMvc를 주입받아서 사용할 수 있다.
+
