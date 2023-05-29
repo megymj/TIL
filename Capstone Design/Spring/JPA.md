@@ -81,3 +81,32 @@ spring:
 
 * @NotNull은 Spring Bean Validation이고, @Column(nullable = false)는 DDL 생성 시 not null이라는 조건이 붙는 것이다.
 * 자세한 설명은 위 링크를 참고하자.
+
+* 현재 프로젝트에서는, DTO에 @NotBlank, @NotNull 등으로 먼저 검증한 뒤, Entity에는 nullable=false로 2차 검증하도록 하였다.
+
+
+
+## 5. @Column(unique = true) 
+
+> [Defining Unique Constraints in JPA](https://www.baeldung.com/jpa-unique-constraints)
+
+* 위 링크를 참고하면, `@Column(unique = true)` 로 직접 명시하는 경우, 아래와 같이 constraint 명이 등록이 된다. 이는 추후 로그를 확인할 때, 알아보기 힘들다. 
+
+```java
+[main] DEBUG org.hibernate.SQL -
+    alter table Person add constraint UK_585qcyc8qh7bg1fwgm1pj4fus unique (email)
+```
+
+* 따라서 아래와 같은 방식을 권장한다. 즉, @Column이 아닌 @Table 단위에서 unique constraint를 설정한다. 
+
+```java
+@Table(uniqueConstraints = { @UniqueConstraint(name = "UniqueNumberAndStatus", columnNames = { "personNumber", "isActive" }) })
+```
+
+* 위의 결과
+
+```java
+[main] DEBUG org.hibernate.SQL -
+    alter table Person add constraint UniqueNumberAndStatus unique (personNumber, isActive)
+```
+

@@ -142,7 +142,11 @@ public class UserController {
     }
     ```
 
-    
+  * `@ControllerAdvice`, `@ExceptionHandler` 를 사용해서 해당 Exception을 등록하여 CustomException을 반환하는 방법도 있겠으나, 결론에서처럼 if문을 사용해서 검증하였음
+
+
+
+
 
 ## 시도 3: BindingResult 사용
 
